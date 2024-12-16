@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1bu8m14gmsvv"]
+
+[ext_resource type="Script" path="res://Script/robot.gd" id="1_6dm20"]
+[ext_resource type="Texture2D" uid="uid://ba6bb24qwjgnw" path="res://Assets/Visuel/smile.png" id="2_1ptbl"]
+[ext_resource type="Texture2D" uid="uid://csi42v1la28gd" path="res://Assets/Visuel/smile_talk.png" id="3_br5fp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i0dv4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1ptbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_br5fp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Robot" type="Node2D" node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_6dm20")
+sprite = NodePath("Visage_Robot")
+
+[node name="Visage_Robot" type="AnimatedSprite2D" parent="."]
+position = Vector2(535, 288)
+sprite_frames = SubResource("SpriteFrames_i0dv4")
