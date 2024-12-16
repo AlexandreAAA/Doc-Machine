@@ -1,30 +1,70 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1bu8m14gmsvv"]
+[gd_scene load_steps=9 format=3 uid="uid://b1bu8m14gmsvv"]
 
 [ext_resource type="Script" path="res://Script/robot.gd" id="1_6dm20"]
-[ext_resource type="Texture2D" uid="uid://ba6bb24qwjgnw" path="res://Assets/Visuel/smile.png" id="2_1ptbl"]
-[ext_resource type="Texture2D" uid="uid://csi42v1la28gd" path="res://Assets/Visuel/smile_talk.png" id="3_br5fp"]
+[ext_resource type="Texture2D" uid="uid://cuh3nli3ir42e" path="res://Assets/Visuel/placeholder_eye_2.png" id="2_ka5wi"]
+[ext_resource type="Texture2D" uid="uid://dsdlxlnd734b4" path="res://Assets/Visuel/placeholder_eye_1.png" id="3_pguk4"]
 [ext_resource type="PackedScene" uid="uid://50bjnx0hrj6d" path="res://Scene/control.tscn" id="4_50f1p"]
+[ext_resource type="Texture2D" uid="uid://b3i0p84q6rupr" path="res://Assets/Visuel/placeholder_mouth.png" id="4_hpuij"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_i0dv4"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_vepv7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_1ptbl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_br5fp")
+"texture": ExtResource("2_ka5wi")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="Robot" type="Node2D" node_paths=PackedStringArray("sprite")]
+[sub_resource type="SpriteFrames" id="SpriteFrames_nsn7w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_pguk4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g6ix0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hpuij")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Robot" type="Node2D" node_paths=PackedStringArray("dialog", "left_eye_sprite", "right_eye_sprite", "mouth_sprite")]
 script = ExtResource("1_6dm20")
-sprite = NodePath("Visage_Robot")
+dialog = NodePath("Dialog_Control")
+left_eye_sprite = NodePath("Node2D/Left_Eye")
+right_eye_sprite = NodePath("Node2D/Right_Eye")
+mouth_sprite = NodePath("Node2D/Mouth")
 
-[node name="Visage_Robot" type="AnimatedSprite2D" parent="."]
-position = Vector2(535, 288)
-sprite_frames = SubResource("SpriteFrames_i0dv4")
+[node name="Node2D" type="Node2D" parent="."]
 
-[node name="Control" parent="." instance=ExtResource("4_50f1p")]
+[node name="Left_Eye" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(219, 230)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_vepv7")
+
+[node name="Right_Eye" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(878, 230)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_nsn7w")
+
+[node name="Mouth" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(543, 354)
+scale = Vector2(0.5, 0.323)
+sprite_frames = SubResource("SpriteFrames_g6ix0")
+
+[node name="Dialog_Control" parent="." instance=ExtResource("4_50f1p")]
+offset_left = 6.0
+offset_top = 27.0
+offset_right = 6.0
+offset_bottom = 27.0

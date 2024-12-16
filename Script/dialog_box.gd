@@ -4,24 +4,37 @@ var dialog_path := "res://Assets/dialog_box.txt"
 var dialog_dico : Dictionary
 @export var dialog_text : RichTextLabel
 
+var cd_text = 0
+var index_text = 0
+var has_text = false
+var text_to_print = []
+
 func _ready() -> void:
 	load_file()
-	set_dialog_text("complique")
+	set_dialog_text("test_1")
+	set_dialog_text("et la alors ?")
+
+func _process(delta: float) -> void:
+	cd_text += 1
+	if cd_text % 80 == 0 and has_text and index_text != text_to_print.size():
+		dialog_text.add_text(text_to_print[index_text])
+		index_text += 1
 
 func load_file():
 	if not FileAccess.file_exists(dialog_path):
 		return
 	var file_access := FileAccess.open(dialog_path, FileAccess.READ)
 	var string := file_access.get_line()
-	print(string)
 	while string != "":
 		dialog_dico[string] = file_access.get_line()
 		string = file_access.get_line()
-		
-	print("\t COUBEH")
-	print(dialog_dico)
 	file_access.close()
-	
+
 func set_dialog_text(key):
 	if dialog_dico.has(key):
-		dialog_text.text = str(dialog_dico[key]).get_slice("\t",1)
+		has_text = true
+		cd_text = 0
+		index_text = 0
+		text_to_print.resize(0)
+		for i in str(dialog_dico[key]).get_slice("\t",1):
+			text_to_print.append(i)
