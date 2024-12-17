@@ -9,5 +9,7 @@ func _ready() -> void:
 	
 	
 func _process(delta: float) -> void:
-	pass
-	
+
+	if end_timer.time_left <= 110:
+		pass
+
