@@ -28,3 +28,11 @@ GoodDoigt
 	Beau doigté ! Je crois que le courant passe bien entre nous~
 GoodExp
 	Vous êtes drôlement branché·e, vous savez ? On sent que vous avez beaucoup d’expérience avec les ordinateurs...
+GoodDriv
+	Plus que deux drivers à réinstaller ! Vous y êtes presque !
+GoodCon
+	Oh ! Ca chatouille les connecteurs ! Allez-y, continuez ! Fouillez plus profond !
+GoodRAM
+	Bravo, vous venez de déconnecter une barrette de mémoire vive. Du coup, je ne souviens plus de là où se trouvent les autres virus. Je vous souhaite bon courage.
+GoodCor
+	Vous vous débrouillez tellement bien que je pourrais bien vouloir garder vos mains à l’intérieur de mon corps. Non, je plaisante. Mais imaginez quand même.

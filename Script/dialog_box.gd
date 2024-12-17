@@ -39,5 +39,6 @@ func set_dialog_text(key):
 		cd_text = 0
 		index_text = 0
 		text_to_print.resize(0)
+		dialog_text.text = ""
 		for i in str(dialog_dico[key]).get_slice("\t",1):
 			text_to_print.append(i)

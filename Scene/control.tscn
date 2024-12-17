@@ -13,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4muap")
 dialog_text = NodePath("Dialog_Box/Dialog_text")
+temps_apparition = 10
 
 [node name="Dialog_Box" type="TextureRect" parent="."]
 layout_mode = 0
@@ -24,9 +25,11 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_ivabg")
 
 [node name="Dialog_text" type="RichTextLabel" parent="Dialog_Box"]
+z_index = 1
 layout_mode = 0
 offset_left = 63.0
 offset_top = 100.0
 offset_right = 911.0
 offset_bottom = 343.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_n7g6h")

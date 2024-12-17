@@ -1,6 +1,6 @@
 extends Node2D
 
-
+@export var robot : Node2D
 @export var end_timer_time := 120.0
 @export var end_timer : Timer
 

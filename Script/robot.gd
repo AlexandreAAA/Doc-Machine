@@ -10,6 +10,8 @@ var victory_condition : Array[bool]
 @export var size_victory_array := 5
 var input_table : Array[bool]
 @export var size_input_table := 12
+var idle_dialog : Array
+var idle_dialog_index = 0
 
 func _unhandled_input(event: InputEvent) -> void:
 	check_input_table(event)
@@ -21,6 +23,9 @@ func _ready() -> void:
 	victory_condition.resize(size_victory_array)
 	timer_idle.wait_time = timer_idle_time
 	choose_random_input()
+	for j in dialog.dialog_dico.keys():
+		if str(j).get_slice("e",0) == "Idl":
+			idle_dialog.append(j)
 	print(input_table)
 
 func change_sprite(le = 0,re = 0,m = 0):
@@ -69,4 +74,8 @@ func check_input_table(event):
 		input_table[11] = false
 
 func _on_timer_idle_timeout() -> void:
-	print("PLAY ANIMATION !")
+
+	if idle_dialog.size() > idle_dialog_index:
+		print("feur")
+		dialog.set_dialog_text(idle_dialog[idle_dialog_index])
+		idle_dialog_index += 1
