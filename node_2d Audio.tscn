@@ -101,7 +101,7 @@ stream_5/stream = ExtResource("6_5xp2f")
 stream_6/stream = ExtResource("7_rexdr")
 stream_7/stream = ExtResource("9_72mhr")
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("AlarmStream", "CorbeilleStream", "ErrorStream", "NotifsStream", "SonnerieStream", "StartUpStream", "TadaStream")]
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("AlarmStream", "CorbeilleStream", "ErrorStream", "NotifsStream", "SonnerieStream", "StartUpStream", "TadaStream", "VoiceStream")]
 script = ExtResource("1_by8f7")
 AlarmStream = NodePath("AlarmAudioStream")
 CorbeilleStream = NodePath("CorbeilleStream")
@@ -110,6 +110,7 @@ NotifsStream = NodePath("NotifsStream")
 SonnerieStream = NodePath("SonnerieStream")
 StartUpStream = NodePath("StartUpStream")
 TadaStream = NodePath("TadaStream")
+VoiceStream = NodePath("VoiceStream")
 debug = true
 
 [node name="CorbeilleStream" type="AudioStreamPlayer2D" parent="."]
@@ -132,3 +133,5 @@ stream = SubResource("AudioStreamRandomizer_e2ebb")
 
 [node name="AlarmAudioStream" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_b1j5w")
+
+[node name="VoiceStream" type="AudioStreamPlayer2D" parent="."]
