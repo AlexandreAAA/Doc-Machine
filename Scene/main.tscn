@@ -8,5 +8,6 @@ script = ExtResource("1_cnk85")
 end_timer = NodePath("Timer")
 
 [node name="Robot" parent="." instance=ExtResource("1_vfne4")]
+position = Vector2(36, 66)
 
 [node name="Timer" type="Timer" parent="."]

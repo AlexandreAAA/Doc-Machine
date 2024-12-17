@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b1bu8m14gmsvv"]
+[gd_scene load_steps=39 format=3 uid="uid://b1bu8m14gmsvv"]
 
 [ext_resource type="Script" path="res://Script/robot.gd" id="1_6dm20"]
 [ext_resource type="Texture2D" uid="uid://cy4wvrciqtja3" path="res://Assets/Visuel/placeholder_eye_2.png" id="2_ka5wi"]
@@ -32,6 +32,9 @@
 [ext_resource type="Texture2D" uid="uid://bx12s016wqoc3" path="res://Assets/Visuel/Bouche/bouche_evil.png" id="28_5h7dd"]
 [ext_resource type="Texture2D" uid="uid://dturt61qaqroq" path="res://Assets/Visuel/Bouche/bouche_moustache.png" id="29_v8w3j"]
 [ext_resource type="Texture2D" uid="uid://dlrtc8rh1lkjj" path="res://Assets/Visuel/Bouche/bouche_triste.png" id="30_10w7s"]
+[ext_resource type="Texture2D" uid="uid://y50n5yrahh16" path="res://Assets/Visuel/vista_window.png" id="33_u2yv8"]
+[ext_resource type="VideoStream" path="res://Assets/boot_up_vista_1080.ogv" id="35_fknl1"]
+[ext_resource type="Texture2D" uid="uid://dit33rdmvrsr7" path="res://Assets/Visuel/vista 1080.png" id="35_uevlj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vepv7"]
 animations = [{
@@ -201,36 +204,76 @@ animations = [{
 [node name="Robot" type="Node2D" node_paths=PackedStringArray("dialog", "left_eye_sprite", "right_eye_sprite", "mouth_sprite", "timer_idle")]
 script = ExtResource("1_6dm20")
 dialog = NodePath("Dialog_Control")
-left_eye_sprite = NodePath("Node2D/Left_Eye")
-right_eye_sprite = NodePath("Node2D/Right_Eye")
-mouth_sprite = NodePath("Node2D/Mouth")
+left_eye_sprite = NodePath("VistaWindow/Node2D/Left_Eye")
+right_eye_sprite = NodePath("VistaWindow/Node2D/Right_Eye")
+mouth_sprite = NodePath("VistaWindow/Node2D/Mouth")
 timer_idle = NodePath("Timer_idle")
 metadata/_edit_horizontal_guides_ = [221.0]
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="VistaWindow" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 7)
+scale = Vector2(0.917178, 0.851351)
+texture = ExtResource("33_u2yv8")
 
-[node name="Left_Eye" type="AnimatedSprite2D" parent="Node2D"]
-position = Vector2(265, 222)
+[node name="Node2D" type="Node2D" parent="VistaWindow"]
+position = Vector2(-594.214, -359.429)
+scale = Vector2(1.0903, 1.1746)
+
+[node name="Left_Eye" type="AnimatedSprite2D" parent="VistaWindow/Node2D"]
+position = Vector2(330, 225)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_vepv7")
+frame = 14
 
-[node name="Right_Eye" type="AnimatedSprite2D" parent="Node2D"]
-position = Vector2(811, 219)
+[node name="Right_Eye" type="AnimatedSprite2D" parent="VistaWindow/Node2D"]
+position = Vector2(750, 225)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_nsn7w")
+frame = 14
 
-[node name="Mouth" type="AnimatedSprite2D" parent="Node2D"]
-position = Vector2(533, 242)
-scale = Vector2(0.5, 0.5)
+[node name="Mouth" type="AnimatedSprite2D" parent="VistaWindow/Node2D"]
+position = Vector2(542, 240)
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_g6ix0")
-
-[node name="Dialog_Control" parent="." instance=ExtResource("4_50f1p")]
-offset_left = 6.0
-offset_top = 27.0
-offset_right = 6.0
-offset_bottom = 27.0
+frame = 2
 
 [node name="Timer_idle" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(30, 30)
+
+[node name="Vista1080" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(31, 30)
+texture = ExtResource("35_uevlj")
+metadata/_edit_lock_ = true
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_direction = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -929.0
+offset_top = -504.0
+offset_right = 991.0
+offset_bottom = 576.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.7778
+metadata/_edit_lock_ = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = ExtResource("35_fknl1")
+autoplay = true
+
+[node name="Dialog_Control" parent="." instance=ExtResource("4_50f1p")]
+z_index = -1
+offset_left = -863.0
+offset_top = -283.0
+offset_right = -766.0
+offset_bottom = -283.0
 
 [connection signal="timeout" from="Timer_idle" to="." method="_on_timer_idle_timeout"]

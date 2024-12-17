@@ -1,12 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://50bjnx0hrj6d"]
 
 [ext_resource type="Script" path="res://Script/dialog_box.gd" id="1_4muap"]
-
-[sub_resource type="Gradient" id="Gradient_6dv8q"]
-offsets = PackedFloat32Array(0.896104, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_jmo18"]
-gradient = SubResource("Gradient_6dv8q")
+[ext_resource type="Texture2D" uid="uid://bi5ihj4hlj0bb" path="res://Assets/Visuel/dialog_window_np.png" id="2_ivabg"]
+[ext_resource type="FontFile" uid="uid://06tukd20hnrd" path="res://Assets/Visuel/calibri.otf" id="3_n7g6h"]
 
 [node name="Dialog_Control" type="Control" node_paths=PackedStringArray("dialog_text")]
 layout_mode = 3
@@ -20,15 +16,17 @@ dialog_text = NodePath("Dialog_Box/Dialog_text")
 
 [node name="Dialog_Box" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 253.0
-offset_top = 421.0
-offset_right = 907.0
-offset_bottom = 609.0
-texture = SubResource("GradientTexture2D_jmo18")
+offset_left = 466.0
+offset_top = 330.0
+offset_right = 1445.36
+offset_bottom = 705.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_ivabg")
 
 [node name="Dialog_text" type="RichTextLabel" parent="Dialog_Box"]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 654.0
-offset_bottom = 189.0
+offset_left = 63.0
+offset_top = 100.0
+offset_right = 911.0
+offset_bottom = 343.0
+theme_override_fonts/normal_font = ExtResource("3_n7g6h")
