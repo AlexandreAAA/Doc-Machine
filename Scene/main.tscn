@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://Script/main.gd" id="1_cnk85"]
 [ext_resource type="PackedScene" uid="uid://b1bu8m14gmsvv" path="res://Scene/robot.tscn" id="1_vfne4"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("end_timer")]
 script = ExtResource("1_cnk85")
+end_timer = NodePath("Timer")
 
 [node name="Robot" parent="." instance=ExtResource("1_vfne4")]
 

@@ -6,9 +6,18 @@ extends Node2D
 @export var mouth_sprite : AnimatedSprite2D
 @export var timer_idle : Timer
 @export var timer_idle_time := 5.0
+var victory_condition : Array[bool]
+@export var size_victory_array := 5
+var input_table 
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("input1"):
+		print(event)
+	if event.is_action_pressed("input1"):
+		print(event)
 
 func _ready() -> void:
+	victory_condition.resize(size_victory_array)
 	timer_idle.wait_time = timer_idle_time
 
 func change_sprite(le = 0,re = 0,m = 0):
@@ -25,6 +34,7 @@ func talk(key):
 	dialog.set_dialog_text(key)
 	
 
-
+func choose_random_input():
+	pass
 func _on_timer_idle_timeout() -> void:
 	pass # Replace with function body.

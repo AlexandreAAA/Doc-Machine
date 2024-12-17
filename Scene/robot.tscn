@@ -198,12 +198,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Robot" type="Node2D" node_paths=PackedStringArray("dialog", "left_eye_sprite", "right_eye_sprite", "mouth_sprite")]
+[node name="Robot" type="Node2D" node_paths=PackedStringArray("dialog", "left_eye_sprite", "right_eye_sprite", "mouth_sprite", "timer_idle")]
 script = ExtResource("1_6dm20")
 dialog = NodePath("Dialog_Control")
 left_eye_sprite = NodePath("Node2D/Left_Eye")
 right_eye_sprite = NodePath("Node2D/Right_Eye")
 mouth_sprite = NodePath("Node2D/Mouth")
+timer_idle = NodePath("Timer_idle")
 metadata/_edit_horizontal_guides_ = [221.0]
 
 [node name="Node2D" type="Node2D" parent="."]
