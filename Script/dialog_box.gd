@@ -9,6 +9,9 @@ var index_text = 0
 var has_text = false
 var text_to_print = []
 
+# temps_apparition contrôle après combien d'image la prochaine lettre du texte apparait
+@export var temps_apparition := 80
+
 func _ready() -> void:
 	load_file()
 	set_dialog_text("test_1")
@@ -16,7 +19,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	cd_text += 1
-	if cd_text % 80 == 0 and has_text and index_text != text_to_print.size():
+	if cd_text % temps_apparition == 0 and has_text and index_text != text_to_print.size():
 		dialog_text.add_text(text_to_print[index_text])
 		index_text += 1
 
