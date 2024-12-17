@@ -1,13 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://l8h8qx88wcyo"]
+[gd_scene load_steps=5 format=3 uid="uid://l8h8qx88wcyo"]
 
 [ext_resource type="Script" path="res://Script/main.gd" id="1_cnk85"]
 [ext_resource type="PackedScene" uid="uid://b1bu8m14gmsvv" path="res://Scene/robot.tscn" id="1_vfne4"]
+[ext_resource type="Texture2D" uid="uid://dit33rdmvrsr7" path="res://Assets/Visuel/vista 1080.png" id="3_ko6i4"]
+[ext_resource type="VideoStream" path="res://Assets/boot_up_vista_1080.ogv" id="4_57r0x"]
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("end_timer")]
 script = ExtResource("1_cnk85")
 end_timer = NodePath("Timer")
 
 [node name="Robot" parent="." instance=ExtResource("1_vfne4")]
+visible = false
 position = Vector2(36, 66)
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(66, 96)
+
+[node name="Vista1080" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(65, 96)
+texture = ExtResource("3_ko6i4")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_direction = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -896.0
+offset_top = -444.0
+offset_right = 1024.0
+offset_bottom = 644.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.7778
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = ExtResource("4_57r0x")
+autoplay = true
