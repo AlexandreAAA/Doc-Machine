@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://5c70kqxkvfd1"
+path="res://.godot/imported/Ne me laisse pas.ogg-cb707ed49fe99dec858713ae82dfd3d8.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/Ne me laisse pas.ogg"
+dest_files=["res://.godot/imported/Ne me laisse pas.ogg-cb707ed49fe99dec858713ae82dfd3d8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

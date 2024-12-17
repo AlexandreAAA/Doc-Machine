@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://n0wm51m6jbyr"
+path="res://.godot/imported/Gingle Netflix.ogg-0b4057d0db42aa5167b9efc3851e8ddd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/Gingle Netflix.ogg"
+dest_files=["res://.godot/imported/Gingle Netflix.ogg-0b4057d0db42aa5167b9efc3851e8ddd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

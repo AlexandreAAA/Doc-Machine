@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cwqaxxjo08pju"
+path="res://.godot/imported/Corbeille 1 (2).ogg-a055620ce2f27bfe0ba60b443fbf22c2.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SounDesign/Corbeille/Corbeille 1 (2).ogg"
+dest_files=["res://.godot/imported/Corbeille 1 (2).ogg-a055620ce2f27bfe0ba60b443fbf22c2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

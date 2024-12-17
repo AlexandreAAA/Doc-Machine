@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bt4jtnu7jq2iy"
+path="res://.godot/imported/Adieu monde cruel.ogg-4943c77de7d7f121975f634a82c20232.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/Adieu monde cruel.ogg"
+dest_files=["res://.godot/imported/Adieu monde cruel.ogg-4943c77de7d7f121975f634a82c20232.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

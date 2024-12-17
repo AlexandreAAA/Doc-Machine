@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://clv5e747xxf5u"
+path="res://.godot/imported/ring 1 (10).ogg-87e6f97ac212e8a652eaf6c3b060cd0e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SounDesign/Rings/ring 1 (10).ogg"
+dest_files=["res://.godot/imported/ring 1 (10).ogg-87e6f97ac212e8a652eaf6c3b060cd0e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
