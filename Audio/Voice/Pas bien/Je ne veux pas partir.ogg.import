@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://qc3yfoth5dbn"
+path="res://.godot/imported/Je ne veux pas partir.ogg-d103c6392b9e545291cfac5a151a40cd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/Je ne veux pas partir.ogg"
+dest_files=["res://.godot/imported/Je ne veux pas partir.ogg-d103c6392b9e545291cfac5a151a40cd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

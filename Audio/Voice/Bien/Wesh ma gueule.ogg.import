@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bm48ioweufse4"
+path="res://.godot/imported/Wesh ma gueule.ogg-d5755f934cc7939467cc8cd35cdd749d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Bien/Wesh ma gueule.ogg"
+dest_files=["res://.godot/imported/Wesh ma gueule.ogg-d5755f934cc7939467cc8cd35cdd749d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

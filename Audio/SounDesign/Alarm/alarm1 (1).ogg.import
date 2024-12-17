@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cmonx0aoaq47l"
+path="res://.godot/imported/alarm1 (1).ogg-fd9b8c5b24f49e865cfb1b47f8d399f5.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SounDesign/Alarm/alarm1 (1).ogg"
+dest_files=["res://.godot/imported/alarm1 (1).ogg-fd9b8c5b24f49e865cfb1b47f8d399f5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

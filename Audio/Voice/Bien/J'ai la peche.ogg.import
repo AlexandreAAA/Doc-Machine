@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bmq2q0g6pwe5t"
+path="res://.godot/imported/J'ai la peche.ogg-4b97db903165326230747dcf8f19f2eb.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Bien/J'ai la peche.ogg"
+dest_files=["res://.godot/imported/J'ai la peche.ogg-4b97db903165326230747dcf8f19f2eb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

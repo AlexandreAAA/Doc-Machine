@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://by1uc1ninrohd"
+path="res://.godot/imported/Fais quelque chose.ogg-041d6d4802ac7e07fbddef1ca1277b00.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/Fais quelque chose.ogg"
+dest_files=["res://.godot/imported/Fais quelque chose.ogg-041d6d4802ac7e07fbddef1ca1277b00.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

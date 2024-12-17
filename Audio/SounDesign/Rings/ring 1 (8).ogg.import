@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://6lvc6rhgxr1e"
+path="res://.godot/imported/ring 1 (8).ogg-38a423eb95e7f91928fa1d091f470a79.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SounDesign/Rings/ring 1 (8).ogg"
+dest_files=["res://.godot/imported/ring 1 (8).ogg-38a423eb95e7f91928fa1d091f470a79.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

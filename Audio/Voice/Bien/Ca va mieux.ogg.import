@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dmb3olunohaih"
+path="res://.godot/imported/Ca va mieux.ogg-ad99938fe8a5136d8cde489abd8ba548.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Bien/Ca va mieux.ogg"
+dest_files=["res://.godot/imported/Ca va mieux.ogg-ad99938fe8a5136d8cde489abd8ba548.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

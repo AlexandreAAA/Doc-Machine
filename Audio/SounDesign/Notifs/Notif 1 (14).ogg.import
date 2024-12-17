@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cpw4k3ff062by"
+path="res://.godot/imported/Notif 1 (14).ogg-5159f700b39fcc3b9243f78d9ca3d25d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SounDesign/Notifs/Notif 1 (14).ogg"
+dest_files=["res://.godot/imported/Notif 1 (14).ogg-5159f700b39fcc3b9243f78d9ca3d25d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

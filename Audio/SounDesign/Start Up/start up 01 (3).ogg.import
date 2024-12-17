@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cpmh5h33yomua"
+path="res://.godot/imported/start up 01 (3).ogg-e4991449246c48ada0e8686377b60afa.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SounDesign/Start Up/start up 01 (3).ogg"
+dest_files=["res://.godot/imported/start up 01 (3).ogg-e4991449246c48ada0e8686377b60afa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

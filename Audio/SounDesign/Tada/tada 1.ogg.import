@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bbbto3gvke4x5"
+path="res://.godot/imported/tada 1.ogg-6bce89f9febc47e063077a75704f58fc.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SounDesign/Tada/tada 1.ogg"
+dest_files=["res://.godot/imported/tada 1.ogg-6bce89f9febc47e063077a75704f58fc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
