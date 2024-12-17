@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://b1bu8m14gmsvv"]
+[gd_scene load_steps=36 format=3 uid="uid://b1bu8m14gmsvv"]
 
 [ext_resource type="Script" path="res://Script/robot.gd" id="1_6dm20"]
 [ext_resource type="Texture2D" uid="uid://cy4wvrciqtja3" path="res://Assets/Visuel/placeholder_eye_2.png" id="2_ka5wi"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://2i404m5gak7" path="res://Assets/Visuel/Yeux/oeil_point_virgule.png" id="15_q10cy"]
 [ext_resource type="Texture2D" uid="uid://bfxs8ofxcr57e" path="res://Assets/Visuel/Yeux/oeil_rectangle.png" id="16_xxso6"]
 [ext_resource type="Texture2D" uid="uid://bbtxu34hirmsq" path="res://Assets/Visuel/Yeux/oeil_regard_suggestif.png" id="17_skbya"]
+[ext_resource type="Texture2D" uid="uid://ml4g82vykttv" path="res://Assets/Visuel/Yeux/oeil_evil.png" id="18_typcd"]
 [ext_resource type="Texture2D" uid="uid://ccb6pdmgrvv43" path="res://Assets/Visuel/Bouche/bouche_emoji.png" id="20_sslui"]
 [ext_resource type="Texture2D" uid="uid://dok80ky3sp1uk" path="res://Assets/Visuel/Bouche/bouche_ast.png" id="21_1d7bw"]
 [ext_resource type="Texture2D" uid="uid://bvc1jmm8qax3i" path="res://Assets/Visuel/Bouche/bouche_rectangle.png" id="22_u4cyp"]
@@ -28,6 +29,9 @@
 [ext_resource type="Texture2D" uid="uid://dks24gii3x1cq" path="res://Assets/Visuel/Bouche/bouche_crash.png" id="24_fui05"]
 [ext_resource type="Texture2D" uid="uid://bvrjtmms5uuc2" path="res://Assets/Visuel/Bouche/bouche_muette.png" id="25_lt07i"]
 [ext_resource type="Texture2D" uid="uid://b73oeyg82ulan" path="res://Assets/Visuel/Bouche/bouche_vista_load.png" id="27_4snqi"]
+[ext_resource type="Texture2D" uid="uid://bx12s016wqoc3" path="res://Assets/Visuel/Bouche/bouche_evil.png" id="28_5h7dd"]
+[ext_resource type="Texture2D" uid="uid://dturt61qaqroq" path="res://Assets/Visuel/Bouche/bouche_moustache.png" id="29_v8w3j"]
+[ext_resource type="Texture2D" uid="uid://dlrtc8rh1lkjj" path="res://Assets/Visuel/Bouche/bouche_triste.png" id="30_10w7s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vepv7"]
 animations = [{
@@ -79,6 +83,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("17_skbya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_typcd")
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_ka5wi")
@@ -140,6 +147,9 @@ animations = [{
 "texture": ExtResource("17_skbya")
 }, {
 "duration": 1.0,
+"texture": ExtResource("18_typcd")
+}, {
+"duration": 1.0,
 "texture": ExtResource("3_pguk4")
 }],
 "loop": true,
@@ -169,10 +179,19 @@ animations = [{
 "texture": ExtResource("25_lt07i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_hpuij")
+"texture": ExtResource("27_4snqi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_4snqi")
+"texture": ExtResource("28_5h7dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_v8w3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_10w7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hpuij")
 }],
 "loop": true,
 "name": &"default",
