@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm6ckdfm3kn5o"
-path="res://.godot/imported/icon.svg-7d7713ba9101559e54038ca07c2fcab9.ctex"
+uid="uid://cy4wvrciqtja3"
+path="res://.godot/imported/placeholder_eye_2.png-9c467aa33f088ec263fe76cb027cde51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Visuel/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-7d7713ba9101559e54038ca07c2fcab9.ctex"]
+source_file="res://Assets/Visuel/placeholder_eye_2.png"
+dest_files=["res://.godot/imported/placeholder_eye_2.png-9c467aa33f088ec263fe76cb027cde51.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

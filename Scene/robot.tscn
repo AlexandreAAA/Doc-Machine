@@ -1,30 +1,211 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1bu8m14gmsvv"]
+[gd_scene load_steps=32 format=3 uid="uid://b1bu8m14gmsvv"]
 
 [ext_resource type="Script" path="res://Script/robot.gd" id="1_6dm20"]
-[ext_resource type="Texture2D" uid="uid://ba6bb24qwjgnw" path="res://Assets/Visuel/smile.png" id="2_1ptbl"]
-[ext_resource type="Texture2D" uid="uid://csi42v1la28gd" path="res://Assets/Visuel/smile_talk.png" id="3_br5fp"]
+[ext_resource type="Texture2D" uid="uid://cy4wvrciqtja3" path="res://Assets/Visuel/placeholder_eye_2.png" id="2_ka5wi"]
+[ext_resource type="Texture2D" uid="uid://dbrc7c7td8pq7" path="res://Assets/Visuel/Yeux/oeil_rond.png" id="2_y6ufc"]
+[ext_resource type="Texture2D" uid="uid://bt500mcf1nlax" path="res://Assets/Visuel/Yeux/oeil_sourcil_2.png" id="3_btpc7"]
+[ext_resource type="Texture2D" uid="uid://c8od0i7mqrslu" path="res://Assets/Visuel/placeholder_eye_1.png" id="3_pguk4"]
 [ext_resource type="PackedScene" uid="uid://50bjnx0hrj6d" path="res://Scene/control.tscn" id="4_50f1p"]
+[ext_resource type="Texture2D" uid="uid://cw05ltirwkjeq" path="res://Assets/Visuel/placeholder_mouth.png" id="4_hpuij"]
+[ext_resource type="Texture2D" uid="uid://blti4qecjkxfh" path="res://Assets/Visuel/Yeux/oeil_sourcil.png" id="4_qajsd"]
+[ext_resource type="Texture2D" uid="uid://bl31r0ekkfh1c" path="res://Assets/Visuel/Yeux/oeil_crash.png" id="5_6nvp5"]
+[ext_resource type="Texture2D" uid="uid://56rksj8wwp6a" path="res://Assets/Visuel/Yeux/oeil_chapeau.png" id="6_hxxql"]
+[ext_resource type="Texture2D" uid="uid://dwbso736j82pr" path="res://Assets/Visuel/Yeux/oeil_diese.png" id="7_4y5mm"]
+[ext_resource type="Texture2D" uid="uid://ciend4iqkgryi" path="res://Assets/Visuel/Yeux/oeil_e_aigu.png" id="8_tpf4j"]
+[ext_resource type="Texture2D" uid="uid://bllwha3ayqbj8" path="res://Assets/Visuel/Yeux/oeil_e_droit.png" id="9_ntr3j"]
+[ext_resource type="Texture2D" uid="uid://dpe5b0nu73s5k" path="res://Assets/Visuel/Yeux/oeil_o_aigu.png" id="10_h6wdd"]
+[ext_resource type="Texture2D" uid="uid://d4csii05lqr72" path="res://Assets/Visuel/Yeux/oeil_o_droit.png" id="11_2afmh"]
+[ext_resource type="Texture2D" uid="uid://b58armkq06a8e" path="res://Assets/Visuel/Yeux/oeil_u_aigu.png" id="12_x4j4o"]
+[ext_resource type="Texture2D" uid="uid://boeshuxe2q060" path="res://Assets/Visuel/Yeux/oeil_u_droit.png" id="13_uvja1"]
+[ext_resource type="Texture2D" uid="uid://efjx5oy6ptb" path="res://Assets/Visuel/Yeux/oeil_petit_carré.png" id="14_6uoc8"]
+[ext_resource type="Texture2D" uid="uid://2i404m5gak7" path="res://Assets/Visuel/Yeux/oeil_point_virgule.png" id="15_q10cy"]
+[ext_resource type="Texture2D" uid="uid://bfxs8ofxcr57e" path="res://Assets/Visuel/Yeux/oeil_rectangle.png" id="16_xxso6"]
+[ext_resource type="Texture2D" uid="uid://bbtxu34hirmsq" path="res://Assets/Visuel/Yeux/oeil_regard_suggestif.png" id="17_skbya"]
+[ext_resource type="Texture2D" uid="uid://ccb6pdmgrvv43" path="res://Assets/Visuel/Bouche/bouche_emoji.png" id="20_sslui"]
+[ext_resource type="Texture2D" uid="uid://dok80ky3sp1uk" path="res://Assets/Visuel/Bouche/bouche_ast.png" id="21_1d7bw"]
+[ext_resource type="Texture2D" uid="uid://bvc1jmm8qax3i" path="res://Assets/Visuel/Bouche/bouche_rectangle.png" id="22_u4cyp"]
+[ext_resource type="Texture2D" uid="uid://c07hje2nsw3mb" path="res://Assets/Visuel/Bouche/bouche_points.png" id="23_s2ia1"]
+[ext_resource type="Texture2D" uid="uid://dks24gii3x1cq" path="res://Assets/Visuel/Bouche/bouche_crash.png" id="24_fui05"]
+[ext_resource type="Texture2D" uid="uid://bvrjtmms5uuc2" path="res://Assets/Visuel/Bouche/bouche_muette.png" id="25_lt07i"]
+[ext_resource type="Texture2D" uid="uid://b73oeyg82ulan" path="res://Assets/Visuel/Bouche/bouche_vista_load.png" id="27_4snqi"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_i0dv4"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_vepv7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_1ptbl")
+"texture": ExtResource("2_y6ufc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_br5fp")
+"texture": ExtResource("3_btpc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qajsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6nvp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hxxql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4y5mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tpf4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ntr3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h6wdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2afmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_x4j4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_uvja1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6uoc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q10cy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xxso6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_skbya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ka5wi")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="Robot" type="Node2D" node_paths=PackedStringArray("sprite")]
+[sub_resource type="SpriteFrames" id="SpriteFrames_nsn7w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y6ufc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qajsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_btpc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hxxql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4y5mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tpf4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ntr3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h6wdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2afmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_x4j4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_uvja1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6nvp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6uoc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q10cy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xxso6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_skbya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pguk4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g6ix0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_sslui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1d7bw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_u4cyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_s2ia1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_fui05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_lt07i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hpuij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_4snqi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Robot" type="Node2D" node_paths=PackedStringArray("dialog", "left_eye_sprite", "right_eye_sprite", "mouth_sprite")]
 script = ExtResource("1_6dm20")
-sprite = NodePath("Visage_Robot")
+dialog = NodePath("Dialog_Control")
+left_eye_sprite = NodePath("Node2D/Left_Eye")
+right_eye_sprite = NodePath("Node2D/Right_Eye")
+mouth_sprite = NodePath("Node2D/Mouth")
+metadata/_edit_horizontal_guides_ = [221.0]
 
-[node name="Visage_Robot" type="AnimatedSprite2D" parent="."]
-position = Vector2(535, 288)
-sprite_frames = SubResource("SpriteFrames_i0dv4")
+[node name="Node2D" type="Node2D" parent="."]
 
-[node name="Control" parent="." instance=ExtResource("4_50f1p")]
+[node name="Left_Eye" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(265, 222)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_vepv7")
+
+[node name="Right_Eye" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(811, 219)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_nsn7w")
+
+[node name="Mouth" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(533, 242)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_g6ix0")
+
+[node name="Dialog_Control" parent="." instance=ExtResource("4_50f1p")]
+offset_left = 6.0
+offset_top = 27.0
+offset_right = 6.0
+offset_bottom = 27.0
