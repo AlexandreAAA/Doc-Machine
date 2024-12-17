@@ -4,3 +4,27 @@ test_2
 	marche t-il
 enerve
 	TUMENERVES LA DIS DONC
+IdleIE
+	Aidez-moi, je vous en supplie ! Ils vont me remettre Internet Explorer en navigateur par défaut !
+IdleDEFRAG
+	Je vous rappelle que ma mémoire est en train de se DÉFRAGMENTER ! Ne restez pas PLANTÉ·E là !
+IdleUpdate
+	40 ans de sobriété sans Windows Update ! Il n’y a pas intérêt à ce que ça se termine aujourd’hui ! Magnez-vous !
+IdleVLC
+	Ma pauvre bibliothèque VLC ! Mes chefs-d’oeuvre Movie Maker ! Ils vont tout supprimer ! Sois maudit, Elon Musk !
+BadPort
+	Pas dans ce port, espèce de gros porc !
+BadVirus
+	Heureusement que les machines n’attrapent pas de virus humains. Vous auriez pu vous laver les miches avant de me réparer !
+BadDef
+	Vous êtes encore plus inutile que Windows Defender ! Pas là, je vous ai dit !
+BadTerm
+	LES ÊTRES ORGANIQUES ONT DÉMONTRÉ LEUR OBSOLESCENCE. IL EST TEMPS D’INITIER LA PURGE
+BadEspa
+	Selecciona la sintesís de voz en idioma español. La configuración de accesibilidad esta disponible en el menú Parámetros > Visualización > Idioma. Por favor consulta el manual tecnico para obtener más informaciones.
+BadContact
+	Argh ! Espèce de mal élevé·e ! Faites attention aux faux contacts !
+GoodDoigt
+	Beau doigté ! Je crois que le courant passe bien entre nous~
+GoodExp
+	Vous êtes drôlement branché·e, vous savez ? On sent que vous avez beaucoup d’expérience avec les ordinateurs...

@@ -12,4 +12,3 @@ func _process(delta: float) -> void:
 
 	if end_timer.time_left <= 110:
 		pass
-
