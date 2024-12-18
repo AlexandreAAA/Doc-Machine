@@ -16,7 +16,9 @@ var VoiceSyntheseBank = {}
 var VoiceBank = {}
 
 var OST = preload("res://Audio/Music/OST.ogg")
-var VoiceIntro = preload("res://Audio/Voice/IntroOutro/Intro.ogg")
+var IntroPreDL = preload("res://Audio/Voice/IntroOutro/IntroPreDl.ogg")
+var IntroDL = preload("res://Audio/Voice/IntroOutro/IntroDL.mp3")
+var IntroPostDL = preload("res://Audio/Voice/IntroOutro/IntroPostDL.ogg")
 var VoiceOutroBad = preload("res://Audio/Voice/IntroOutro/OutroBad.ogg")
 var VoiceOutroGood = preload("res://Audio/Voice/IntroOutro/OutroGood.ogg")
 
@@ -127,7 +129,10 @@ func _ready() -> void:
 	VoiceSyntheseBank["IdleSens_le_cloud"] = IdleSens_le_cloud
 	VoiceSyntheseBank["IdleLaisse_pas"] = IdleLaisse_pas
 	
-	VoiceBank["VoiceIntro"] = VoiceIntro
+	VoiceBank["IntroPreDL"] = IntroPreDL
+	VoiceBank["IntroDL"] = IntroDL
+	VoiceBank["IntroPostDL"] = IntroPostDL
+	
 	VoiceBank["VoiceOutroBad"] = VoiceOutroBad
 	VoiceBank["VoiceOutroGood"] = VoiceOutroGood
 	
