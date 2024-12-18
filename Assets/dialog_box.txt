@@ -12,19 +12,45 @@ IdleUpdate
 	40 ans de sobriété sans Windows Update ! Il n’y a pas intérêt à ce que ça se termine aujourd’hui ! Magnez-vous !
 IdleVLC
 	Ma pauvre bibliothèque VLC ! Mes chefs-d’oeuvre Movie Maker ! Ils vont tout supprimer ! Sois maudit, Elon Musk !
-BadPort
+BadCable_alu
 	Pas dans ce port, espèce de gros porc !
-BadVirus
-	Heureusement que les machines n’attrapent pas de virus humains. Vous auriez pu vous laver les miches avant de me réparer !
-BadDef
-	Vous êtes encore plus inutile que Windows Defender ! Pas là, je vous ai dit !
-BadTerm
-	LES ÊTRES ORGANIQUES ONT DÉMONTRÉ LEUR OBSOLESCENCE. IL EST TEMPS D’INITIER LA PURGE
-BadEspa
-	Selecciona la sintesís de voz en idioma español. La configuración de accesibilidad esta disponible en el menú Parámetros > Visualización > Idioma. Por favor consulta el manual tecnico para obtener más informaciones.
-BadContact
+BadFil
 	Argh ! Espèce de mal élevé·e ! Faites attention aux faux contacts !
-GoodDoigt
+BadRam
+	Heureusement que les machines n’attrapent pas de virus humains. Vous auriez pu vous laver les miches avant de me réparer !
+BadBouton
+	Vous êtes encore plus inutile que Windows Defender ! Pas là, je vous ai dit !
+BadGpu
+	LES ÊTRES ORGANIQUES ONT DÉMONTRÉ LEUR OBSOLESCENCE. IL EST TEMPS D’INITIER LA PURGE
+BadEnceinte
+	Selecciona la sintesís de voz en idioma español. La configuración de accesibilidad esta disponible en el menú Parámetros > Visualización > Idioma. Por favor consulta el manual tecnico para obtener más informaciones.
+BadVentilo
+	C’est donc ça d’être asthmatique ? Pourquoi vous avez déconnecté le ventilo???
+BadDessous_de_plat
+	Je ne sens plus mon côté gauche... Rose... J’ai si froid Rose...
+BadGrille
+	Attention au plafond, je sais que le votre est plutôt bas mais ce n’est pas une raison pour abrutir vos camarades électroniques !
+BadCable_alu
+	Pas pour vous jeter au crocodile, mais vous êtes un peu pince-sans-rire.
+BadJack
+	Pas dans ce port, espèce de gros porc !
+GoodFil
 	Beau doigté ! Je crois que le courant passe bien entre nous~
-GoodExp
+GoodCable_alu
+	Roh, si vous continuez à toucher toutes ses bonnes parties, je vais finir par en pincer pour vous.
+GoodBouton
+	Plus que deux drivers à réinstaller ! Vous y êtes presque !
+GoodGrille
+	Oh ! Ca chatouille les connecteurs ! Allez-y, continuez ! Grattez moi le menton ! Fouillez plus profond !
+GoodRam
+	Bravo, vous venez de déconnecter une barrette de mémoire vive. Du coup, je ne souviens plus de là où se trouvent les autres virus. Je vous souhaite bon courage.
+GoodEnceinte
+	Vous vous débrouillez tellement bien que je pourrais bien vouloir garder vos mains à l’intérieur de mon corps. Non, je plaisante. Mais imaginez quand même.
+GoodGpu
+	Elle me manquera pas cette carte graphique, elle est tellement vieille qu’elle lag même sur paint.
+GoodVentilo
+	Wow je sens mes circuits se rafraichir ! Ca doit faire 39 ans que j’ai pas eu aussi froid.
+GoodDessous_de_plat
+	J’ai jamais compris pourquoi y avait un dessous de plat la dedans, ils avaient cru quoi, que j’étais un four ? Remarque vu comment j’avais chaud...
+GoodJack
 	Vous êtes drôlement branché·e, vous savez ? On sent que vous avez beaucoup d’expérience avec les ordinateurs...

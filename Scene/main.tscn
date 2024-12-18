@@ -1,17 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://l8h8qx88wcyo"]
 
 [ext_resource type="Script" path="res://Script/main.gd" id="1_cnk85"]
-[ext_resource type="PackedScene" uid="uid://b1bu8m14gmsvv" path="res://Scene/robot.tscn" id="1_vfne4"]
 [ext_resource type="Texture2D" uid="uid://dit33rdmvrsr7" path="res://Assets/Visuel/vista 1080.png" id="3_ko6i4"]
+[ext_resource type="PackedScene" uid="uid://b1bu8m14gmsvv" path="res://Scene/robot.tscn" id="4_4l8r2"]
 [ext_resource type="VideoStream" path="res://Assets/boot_up_vista_1080.ogv" id="4_57r0x"]
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("end_timer")]
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("robot", "end_timer")]
 script = ExtResource("1_cnk85")
+robot = NodePath("Robot")
 end_timer = NodePath("Timer")
-
-[node name="Robot" parent="." instance=ExtResource("1_vfne4")]
-visible = false
-position = Vector2(36, 66)
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -39,4 +36,5 @@ ratio = 1.7778
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
 layout_mode = 2
 stream = ExtResource("4_57r0x")
-autoplay = true
+
+[node name="Robot" parent="." instance=ExtResource("4_4l8r2")]

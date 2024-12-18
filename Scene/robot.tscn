@@ -206,6 +206,8 @@ left_eye_sprite = NodePath("VistaWindow/Node2D/Left_Eye")
 right_eye_sprite = NodePath("VistaWindow/Node2D/Right_Eye")
 mouth_sprite = NodePath("VistaWindow/Node2D/Mouth")
 timer_idle = NodePath("Timer_idle")
+timer_idle_time = 20.0
+size_input_table = 10
 metadata/_edit_horizontal_guides_ = [221.0]
 
 [node name="VistaWindow" type="Sprite2D" parent="."]
@@ -237,7 +239,6 @@ sprite_frames = SubResource("SpriteFrames_g6ix0")
 frame = 2
 
 [node name="Timer_idle" type="Timer" parent="."]
-wait_time = 5.0
 
 [node name="Dialog_Control" parent="." instance=ExtResource("4_50f1p")]
 z_index = -1
