@@ -7,7 +7,8 @@ extends Node2D
 
 func _ready() -> void:
 	end_timer.wait_time = end_timer_time
-	
+
+
 func _process(delta: float) -> void:
 	
 	if end_timer.time_left <= 110:

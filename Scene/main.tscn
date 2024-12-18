@@ -36,6 +36,5 @@ ratio = 1.7778
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
 layout_mode = 2
 stream = ExtResource("4_57r0x")
-autoplay = true
 
 [node name="Robot" parent="." instance=ExtResource("4_4l8r2")]
