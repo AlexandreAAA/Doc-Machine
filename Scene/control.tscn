@@ -13,7 +13,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4muap")
 dialog_text = NodePath("Dialog_Box/Dialog_text")
-temps_apparition = 10
 
 [node name="Dialog_Box" type="TextureRect" parent="."]
 layout_mode = 0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dnyiicx6ueuky"
+path="res://.godot/imported/BadVentilo.ogg-6624f0f83a1392dadac8fcd5d48e9637.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/BadVentilo.ogg"
+dest_files=["res://.godot/imported/BadVentilo.ogg-6624f0f83a1392dadac8fcd5d48e9637.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

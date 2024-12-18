@@ -21,14 +21,14 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if !dl_started :
-		dl_start()
+		intro()
 	prog_bar.value = (end_timer_time - end_timer.time_left)
 	update_displayed_time()
 
 func _on_end_timer_timeout() -> void:
 	robot.ending(false)
 		
-func dl_start():
+func intro():
 	dl_started = true
 	download_window.visible = true	
 	var tween = get_tree().create_tween()

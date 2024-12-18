@@ -18,8 +18,6 @@ IdleUpdate
 	40 ans de sobriété sans Windows Update ! Il n’y a pas intérêt à ce que ça se termine aujourd’hui ! Magnez-vous !
 IdleVLC
 	Ma pauvre bibliothèque VLC ! Mes chefs-d’oeuvre Movie Maker ! Ils vont tout supprimer ! Sois maudit, Elon Musk !
-BadCable_alu
-	Pas dans ce port, espèce de gros porc !
 BadFil
 	Argh ! Espèce de mal élevé·e ! Faites attention aux faux contacts !
 BadRam
@@ -55,7 +53,7 @@ GoodEnceinte
 GoodGpu
 	Elle me manquera pas cette carte graphique, elle est tellement vieille qu’elle lag même sur paint.
 GoodVentilo
-	Wow je sens mes circuits se rafraichir ! Ca doit faire 39 ans que j’ai pas eu aussi froid.
+	Wow, je sens mes circuits se rafraichir ! Ca doit faire 39 ans que j’ai pas eu aussi froid.
 GoodDessous_de_plat
 	J’ai jamais compris pourquoi y avait un dessous de plat la dedans, ils avaient cru quoi, que j’étais un four ? Remarque vu comment j’avais chaud...
 GoodJack

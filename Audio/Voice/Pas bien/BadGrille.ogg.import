@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dukyo5dgj8ap1"
+path="res://.godot/imported/BadGrille.ogg-8857f5c591025e2d9bc733c6c2efd5cb.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/BadGrille.ogg"
+dest_files=["res://.godot/imported/BadGrille.ogg-8857f5c591025e2d9bc733c6c2efd5cb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
