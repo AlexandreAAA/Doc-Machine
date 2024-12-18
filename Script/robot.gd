@@ -183,7 +183,6 @@ func check_input_table(event):
 					rotate_sprite(0,0,0)
 					change_sprite(1,2,8)
 					talk("BadEnceinte") #espagnol
-		if event.is_action_pressed("bouton"):
 	if event.is_action_released("enceinte"):
 		fenetre_handler.scale_down(6)
 	if event.is_action_pressed("bouton"):
