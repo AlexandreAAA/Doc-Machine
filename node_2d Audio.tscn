@@ -142,3 +142,5 @@ max_polyphony = 3
 [node name="MusicStream" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("41_u6b3s")
 max_polyphony = 2
+
+[connection signal="finished" from="VoiceStream" to="." method="_on_voice_stream_finished"]

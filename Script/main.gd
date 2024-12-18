@@ -45,6 +45,8 @@ func intro():
 	robot.change_sprite(0,0,6)
 	robot.rotate_sprite(0,0,0)
 	robot.talk("Intro2")
+	robot.audio._musicPlay()
+
 
 	
 func update_displayed_time():

@@ -8,6 +8,9 @@ extends Node2D
 @export var timer_transi_end : Timer
 @export var timer_idle_time := 5.0
 @export var fenetre_handler : Node2D
+
+@export var audio : Node2D
+
 var victory_condition : Array[bool]
 var input_table : Array[bool]
 var once_dialog_array : Array[bool]
@@ -75,7 +78,7 @@ func choose_random_input():
 func check_input_table(event):
 	if event.is_action_pressed("ram"):
 		fenetre_handler.scale_up(0)
-		if !dialog.has_text:
+		if !dialog.has_text and !audio.bloquant:
 			if once_dialog_array[0]:
 				once_dialog_array[0] = false
 				input_table[0] = false
@@ -83,15 +86,17 @@ func check_input_table(event):
 					change_sprite(4,4,2)
 					rotate_sprite(0,0,0)
 					talk("GoodRam")
+					audio._playVoiceLine("GoodRam",true)
 				else:
 					change_sprite(5,5,4)
 					rotate_sprite(0,0,0)
 					talk("BadRam")
+					audio._playVoiceLine("BadRam",true)
 	if event.is_action_released("ram"):
 		fenetre_handler.scale_down(0)
 	if event.is_action_pressed("jack"):
 		fenetre_handler.scale_up(1)
-		if !dialog.has_text:
+		if !dialog.has_text and !audio.bloquant:
 			if once_dialog_array[1]:
 				once_dialog_array[1] = false
 				input_table[1] = false
@@ -100,15 +105,17 @@ func check_input_table(event):
 					rotate_sprite(0,0,180)
 					change_sprite(15,15,9)
 					talk("GoodJack")
+					audio._playVoiceLine("GoodJack",true)
 				else:
 					rotate_sprite(0,0,180)
 					change_sprite(6,7,7)
 					talk("BadJack")
+					audio._playVoiceLine("BadJack",true)
 	if event.is_action_released("jack"):
 		fenetre_handler.scale_down(1)
 	if event.is_action_pressed("ventilo"):
 		fenetre_handler.scale_up(2)
-		if !dialog.has_text:
+		if !dialog.has_text and !audio.bloquant:
 			if once_dialog_array[2]:
 				once_dialog_array[2] = false
 				input_table[2] = false
@@ -116,15 +123,17 @@ func check_input_table(event):
 					rotate_sprite(0,0,0)
 					change_sprite(11,10,2)
 					talk("GoodVentilo")
+					audio._playVoiceLine("GoodVentilo",true)
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(13,13,1)
 					talk("BadVentilo")
+					audio._playVoiceLine("BadVentilo",true)
 	if event.is_action_released("ventilo"):
 		fenetre_handler.scale_down(2)
 	if event.is_action_pressed("dessous_de_plat"):
 		fenetre_handler.scale_up(3)
-		if !dialog.has_text:
+		if !dialog.has_text and !audio.bloquant:
 			if once_dialog_array[3]:
 				once_dialog_array[3] = false
 				input_table[3] = false
@@ -132,14 +141,16 @@ func check_input_table(event):
 					change_sprite(4,4,3)
 					rotate_sprite(180,180,0)
 					talk("GoodDessous_de_plat")
+					audio._playVoiceLine("GoodDessous_de_plat",true)
 				else:
 					change_sprite(3,3,2)
 					talk("BadDessous_de_plat")
+					audio._playVoiceLine("BadDessous_de_plat",true)
 	if event.is_action_released("dessous_de_plat"):
 		fenetre_handler.scale_down(3)
 	if event.is_action_pressed("gpu"):
 		fenetre_handler.scale_up(4)
-		if !dialog.has_text:
+		if !dialog.has_text and !audio.bloquant:
 			if once_dialog_array[4]:
 				once_dialog_array[4] = false
 				input_table[4] = false
@@ -147,15 +158,17 @@ func check_input_table(event):
 					change_sprite(14,14,4)
 					rotate_sprite(0,0,180)
 					talk("GoodGpu")
+					audio._playVoiceLine("GoodGpu",true)
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(16,16,2)
 					talk("BadGpu")
+					audio._playVoiceLine("BadGpu",true)
 	if event.is_action_released("gpu"):
 		fenetre_handler.scale_down(4)
 	if event.is_action_pressed("cable_alu"):
 		fenetre_handler.scale_up(5)
-		if !dialog.has_text:
+		if !dialog.has_text and !audio.bloquant:
 			if once_dialog_array[5]:
 				once_dialog_array[5] = false
 				input_table[5] = false
@@ -163,15 +176,17 @@ func check_input_table(event):
 					change_sprite(4,4,9)
 					rotate_sprite(0,0,180)
 					talk("GoodCable_alu")
+					audio._playVoiceLine("GoodCable_alu",true)
 				else:
 					change_sprite(4,4,3)
 					rotate_sprite(180,180,0)
 					talk("BadCable_alu")
+					audio._playVoiceLine("BadCable_alu", true)
 	if event.is_action_released("cable_alu"):
 		fenetre_handler.scale_down(5)
 	if event.is_action_pressed("enceinte"):
 		fenetre_handler.scale_up(6)
-		if !dialog.has_text:
+		if !dialog.has_text and !audio.bloquant:
 			if once_dialog_array[6]:
 				once_dialog_array[6] = false
 				input_table[6] = false
@@ -179,15 +194,17 @@ func check_input_table(event):
 					rotate_sprite(0,0,0)
 					change_sprite(1,2,0)
 					talk("GoodEnceinte") #garder les mains
+					audio._playVoiceLine("GoodEnceinte", true)
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(1,2,8)
 					talk("BadEnceinte") #espagnol
+					audio._playVoiceLine("BadEnceinte", true)
 	if event.is_action_released("enceinte"):
 		fenetre_handler.scale_down(6)
 	if event.is_action_pressed("bouton"):
 		fenetre_handler.scale_up(7)
-		if !dialog.has_text:
+		if !dialog.has_text and !audio.bloquant:
 			if once_dialog_array[7]:
 				once_dialog_array[7] = false
 				input_table[7] = false
@@ -195,15 +212,17 @@ func check_input_table(event):
 					change_sprite(12,12,9)
 					rotate_sprite(0,0,180)
 					talk("GoodBouton")
+					audio._playVoiceLine("GoodBouton", true)
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(10,11,5)
 					talk("BadBouton")
+					audio._playVoiceLine("BadBouton",true)
 	if event.is_action_released("bouton"):
 		fenetre_handler.scale_down(7)
 	if event.is_action_pressed("fil"):
 		fenetre_handler.scale_up(8)
-		if !dialog.has_text:
+		if !dialog.has_text and !audio.bloquant:
 			if once_dialog_array[8]:
 				once_dialog_array[8] = false
 				input_table[8] = false
@@ -211,15 +230,17 @@ func check_input_table(event):
 					rotate_sprite(0,0,0)
 					change_sprite(15,15,0)
 					talk("GoodFil") #doigté
+					audio._playVoiceLine("GoodFil",true)
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(5,5,4)
 					talk("BadFil") #faux contact
+					audio._playVoiceLine("BadFil",true)
 	if event.is_action_released("fil"):
 		fenetre_handler.scale_down(8)
 	if event.is_action_pressed("grille"):
 		fenetre_handler.scale_up(9)
-		if !dialog.has_text:
+		if !dialog.has_text and !audio.bloquant:
 			if once_dialog_array[9]:
 				once_dialog_array[9] = false
 				input_table[9] = false
@@ -227,10 +248,12 @@ func check_input_table(event):
 					change_sprite(12,12,4)
 					rotate_sprite(0,0,180)
 					talk("GoodGrille") #chatouille gratouille
+					audio._playVoiceLine("GoodGrille",true)
 				else:
 					change_sprite(14,14,3)
 					rotate_sprite(0,0,180)
 					talk("BadGrille") #plafond
+					audio._playVoiceLine("BadGrille",true)
 	if event.is_action_released("grille"):
 		fenetre_handler.scale_down(9)
 
@@ -257,6 +280,7 @@ func end_text_ending():
 func _on_timer_idle_timeout() -> void:
 	if idle_dialog.size() > idle_dialog_index:
 		dialog.set_dialog_text(idle_dialog[idle_dialog_index])
+		audio._playVoiceLine(idle_dialog[idle_dialog_index],false)
 		idle_dialog_index += 1
 
 func _on_timer_transi_end_timeout() -> void:

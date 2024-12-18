@@ -12,6 +12,8 @@ extends Node2D
 
 @export var debug : bool
 
+var bloquant = false
+
 var VoiceSyntheseBank = {}
 var VoiceBank = {}
 
@@ -73,7 +75,7 @@ var IdlePire = preload("res://Audio/Voice/Pas bien/Pire.ogg")
 
 func _playAtInput() -> void:
 	if Input.is_action_pressed("TestSon") :
-		_playVoiceLine("Pire")
+		_playVoiceLine("Pire",true)
 		
 func _changeClipAtInput(plusOne : int) :
 	if Input.is_action_pressed("ChangeSon") :
@@ -172,13 +174,15 @@ func _process(delta: float) -> void:
 	if debug :
 		_playAtInput()
 
-func _playVoiceLine(voiceBankKey : String) -> void :
+func _playVoiceLine(voiceBankKey : String, is_blocking : bool) -> void :
 	VoiceStream.stream = VoiceBank[voiceBankKey]
+	bloquant = is_blocking
 	VoiceStream.play()
 	
-func _playSynthVoiceLine(synthVoiceBankKey : String) -> void : 
+func _playSynthVoiceLine(synthVoiceBankKey : String, is_blocking : bool) -> void : 
 	VoiceStream.stream = VoiceSyntheseBank[synthVoiceBankKey]
+	bloquant = is_blocking
 	VoiceStream.play()
-	
-	
-	
+
+func _on_voice_stream_finished() -> void:
+	bloquant = false
