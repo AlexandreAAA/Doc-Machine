@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b1bu8m14gmsvv"]
+[gd_scene load_steps=40 format=3 uid="uid://b1bu8m14gmsvv"]
 
 [ext_resource type="Script" path="res://Script/robot.gd" id="1_6dm20"]
 [ext_resource type="Texture2D" uid="uid://cy4wvrciqtja3" path="res://Assets/Visuel/placeholder_eye_2.png" id="2_ka5wi"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://y50n5yrahh16" path="res://Assets/Visuel/vista_window.png" id="33_u2yv8"]
 [ext_resource type="Script" path="res://Script/handler_fenetre.gd" id="34_2gxvx"]
 [ext_resource type="PackedScene" uid="uid://cekpjldiadjhk" path="res://Scene/fenetre.tscn" id="34_20iq8"]
+[ext_resource type="PackedScene" uid="uid://ck16uv8q1djdf" path="res://node_2d Audio.tscn" id="36_8011r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vepv7"]
 animations = [{
@@ -201,7 +202,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Robot" type="Node2D" node_paths=PackedStringArray("dialog", "left_eye_sprite", "right_eye_sprite", "mouth_sprite", "timer_idle", "timer_transi_end", "fenetre_handler")]
+[node name="Robot" type="Node2D" node_paths=PackedStringArray("dialog", "left_eye_sprite", "right_eye_sprite", "mouth_sprite", "timer_idle", "timer_transi_end", "fenetre_handler", "audio")]
 script = ExtResource("1_6dm20")
 dialog = NodePath("Dialog_Control")
 left_eye_sprite = NodePath("VistaWindow/Node2D/Left_Eye")
@@ -211,6 +212,7 @@ timer_idle = NodePath("Timer_idle")
 timer_transi_end = NodePath("Timer_Transi_End")
 timer_idle_time = 20.0
 fenetre_handler = NodePath("Icones_objets")
+audio = NodePath("Audio")
 size_input_table = 10
 metadata/_edit_horizontal_guides_ = [221.0]
 
@@ -289,6 +291,8 @@ texture_hovered = ExtResource("2_ka5wi")
 [node name="dessous_de_plat" parent="Icones_objets" instance=ExtResource("34_20iq8")]
 
 [node name="jack" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+
+[node name="Audio" parent="." instance=ExtResource("36_8011r")]
 
 [connection signal="timeout" from="Timer_idle" to="." method="_on_timer_idle_timeout"]
 [connection signal="timeout" from="Timer_Transi_End" to="." method="_on_timer_transi_end_timeout"]

@@ -39,6 +39,7 @@ func intro():
 	robo_tween.parallel().tween_property($Robot,"position", Vector2(-200,60), 0.1)
 	robo_tween.parallel().tween_property($Robot,"scale", Vector2(1, 1), 0.1)
 	robot.talk("Intro")
+	robot.audio._musicPlay()
 
 	
 func update_displayed_time():
