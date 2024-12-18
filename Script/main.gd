@@ -10,6 +10,10 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	
 	if end_timer.time_left <= 110:
 		pass
+
+
+
+func _on_end_timer_timeout() -> void:
+	robot.ending(false)

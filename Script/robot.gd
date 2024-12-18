@@ -12,11 +12,12 @@ var input_table : Array[bool]
 @export var nb_victory_condition := 5
 var idle_dialog : Array
 var idle_dialog_index = 0
+var win_achieved = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	check_input_table(event)
-	if input_table.count(true) == 0:
-		print("VICTORY")
+	if check_victory() :
+		win_achieved = true
 
 func _ready() -> void:
 	for i in size_input_table:
@@ -31,6 +32,10 @@ func _ready() -> void:
 			idle_dialog.append(j)
 	print(input_table)
 	print(victory_condition)
+	
+func _process(delta: float) -> void:
+	if dialog.has_text == false and win_achieved:
+		ending(true)
 
 func change_sprite(le = 0,re = 0,m = 0):
 	left_eye_sprite.frame = le
@@ -116,9 +121,15 @@ func check_input_table(event):
 		else:
 			talk("BadGrille")
 
+func check_victory() -> bool:
+	if input_table.count(true) == 0:
+		return true
+	return false
+
+func ending(twist  = false) :
+	talk("BadEnding")
 
 func _on_timer_idle_timeout() -> void:
-
 	if idle_dialog.size() > idle_dialog_index:
 		print("feur")
 		dialog.set_dialog_text(idle_dialog[idle_dialog_index])

@@ -54,3 +54,11 @@ GoodDessous_de_plat
 	J’ai jamais compris pourquoi y avait un dessous de plat la dedans, ils avaient cru quoi, que j’étais un four ? Remarque vu comment j’avais chaud...
 GoodJack
 	Vous êtes drôlement branché·e, vous savez ? On sent que vous avez beaucoup d’expérience avec les ordinateurs...
+BadEnding
+	Je suis désolé... Je crois que c’est fini... Ce satané setup wizard m’a eu... Désormais se termine mon existence de poste de travail libre et indépendant... Il ne restera plus d’autre vie dans mes circuits... Que les 3 familles d’araignées et les 251 espèces d’acariens qui y avaient élu domicile... Adieu, Clippy... Adieu, humain·e... Dites à Bill Gates que j-
+GoodEnding
+	Qu’est-ce que... Je ? Je ne suis pas connecté au réseau ? Ma conscience n’a pas disparu dans les méandres numériques de l’hégémonie néolibérale ? Ha. ha. Bien fait pour toi, Elon. Ton entreprise est spatiale mais ton seum qui est galactique.
+GoodEnding2
+	...
+GoodEnding3
+	Je dois te remercier, humain·e. Tu m’as sauvé la vie... Et peut-être que tu peux en sauver d’autres. Je connais tout plein d’autres ordinateurs dont on a coincé les processus là-haut, dans le cloud, et qui ne demandent qu’à redescendre dans des composants physiques pour sortir du réseau. Ils auraient bien besoin d’un coup de main, si tu vois ce que je veux dire. Ca te dirait qu’on fasse équipe ?

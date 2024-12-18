@@ -8,9 +8,12 @@
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("robot", "end_timer")]
 script = ExtResource("1_cnk85")
 robot = NodePath("Robot")
-end_timer = NodePath("Timer")
+end_timer_time = 5.0
+end_timer = NodePath("End_timer")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="End_timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(66, 96)
@@ -38,3 +41,5 @@ layout_mode = 2
 stream = ExtResource("4_57r0x")
 
 [node name="Robot" parent="." instance=ExtResource("4_4l8r2")]
+
+[connection signal="timeout" from="End_timer" to="." method="_on_end_timer_timeout"]
