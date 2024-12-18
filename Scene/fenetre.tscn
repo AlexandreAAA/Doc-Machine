@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://cekpjldiadjhk"]
 
-[ext_resource type="Texture2D" uid="uid://y50n5yrahh16" path="res://Assets/Visuel/vista_window.png" id="1_3fv8n"]
-[ext_resource type="Texture2D" uid="uid://5j4qrqn2eext" path="res://Assets/Visuel/starlink dl_window.png" id="2_16ibe"]
-[ext_resource type="Texture2D" uid="uid://cbupclrnfc2pn" path="res://Assets/Visuel/starlink download window.png" id="3_ko2d2"]
+[ext_resource type="Texture2D" uid="uid://cno4rya3esv4p" path="res://Assets/Visuel/vista_window_Grey.png" id="1_gql2d"]
+[ext_resource type="Texture2D" uid="uid://bdnw3x81huk20" path="res://Assets/Visuel/vista_window_Green.png" id="2_j0e5g"]
+[ext_resource type="Texture2D" uid="uid://beofkmmrc73m6" path="res://Assets/Visuel/vista_window_Red.png" id="3_bj8jh"]
 [ext_resource type="Script" path="res://Script/fenetre.gd" id="4_2plnh"]
 [ext_resource type="Texture2D" uid="uid://bkgsiqht61k2b" path="res://Assets/Visuel/smile.png" id="5_oxwmj"]
 [ext_resource type="Texture2D" uid="uid://rvml2c5axvb3" path="res://Assets/Visuel/smile_talk.png" id="6_qjjh7"]
@@ -11,13 +11,13 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_3fv8n")
+"texture": ExtResource("1_gql2d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_16ibe")
+"texture": ExtResource("2_j0e5g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_ko2d2")
+"texture": ExtResource("3_bj8jh")
 }],
 "loop": true,
 "name": &"default",

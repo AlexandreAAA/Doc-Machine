@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://b1bu8m14gmsvv"]
+[gd_scene load_steps=50 format=3 uid="uid://b1bu8m14gmsvv"]
 
 [ext_resource type="Script" path="res://Script/robot.gd" id="1_6dm20"]
 [ext_resource type="Texture2D" uid="uid://cy4wvrciqtja3" path="res://Assets/Visuel/placeholder_eye_2.png" id="2_ka5wi"]
@@ -35,7 +35,17 @@
 [ext_resource type="Texture2D" uid="uid://y50n5yrahh16" path="res://Assets/Visuel/vista_window.png" id="33_u2yv8"]
 [ext_resource type="Script" path="res://Script/handler_fenetre.gd" id="34_2gxvx"]
 [ext_resource type="PackedScene" uid="uid://cekpjldiadjhk" path="res://Scene/fenetre.tscn" id="34_20iq8"]
+[ext_resource type="Texture2D" uid="uid://dq0ybrmq1s7tt" path="res://Assets/Visuel/usb.png" id="36_7ks5d"]
 [ext_resource type="PackedScene" uid="uid://ck16uv8q1djdf" path="res://node_2d Audio.tscn" id="36_8011r"]
+[ext_resource type="Texture2D" uid="uid://ckuawyo20egbv" path="res://Assets/Visuel/usb on.png" id="37_6c0jx"]
+[ext_resource type="Texture2D" uid="uid://bxxijnt654okw" path="res://Assets/Visuel/ram.png" id="38_3qn4b"]
+[ext_resource type="Texture2D" uid="uid://dccpwi0rmylb1" path="res://Assets/Visuel/ram on.png" id="39_8ybyg"]
+[ext_resource type="Texture2D" uid="uid://c6cfytafklv5a" path="res://Assets/Visuel/ventilo.png" id="40_ud70d"]
+[ext_resource type="Texture2D" uid="uid://bg1hvj2ikulby" path="res://Assets/Visuel/ventilo on.png" id="41_h7c5x"]
+[ext_resource type="Texture2D" uid="uid://bcok34quy4lmy" path="res://Assets/Visuel/bouton.png" id="42_hs3cd"]
+[ext_resource type="Texture2D" uid="uid://crcw6pxc8layg" path="res://Assets/Visuel/bouton on.png" id="43_0bihv"]
+[ext_resource type="Texture2D" uid="uid://cw6wxmqvmt4qv" path="res://Assets/Visuel/jack.png" id="44_pviy0"]
+[ext_resource type="Texture2D" uid="uid://8o5yncjrpot3" path="res://Assets/Visuel/jack on.png" id="45_udkw3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vepv7"]
 animations = [{
@@ -258,7 +268,6 @@ wait_time = 5.0
 one_shot = true
 
 [node name="Icones_objets" type="Node2D" parent="." node_paths=PackedStringArray("cable_alu", "fil", "ram", "gpu", "ventilo", "grille", "bouton", "enceinte", "dessous_de_plat", "jack")]
-visible = false
 script = ExtResource("34_2gxvx")
 cable_alu = NodePath("cable_alu")
 fil = NodePath("fil")
@@ -272,26 +281,44 @@ dessous_de_plat = NodePath("dessous_de_plat")
 jack = NodePath("jack")
 
 [node name="cable_alu" parent="Icones_objets" instance=ExtResource("34_20iq8")]
-texture_base = ExtResource("3_pguk4")
-texture_hovered = ExtResource("2_ka5wi")
+position = Vector2(-248, -363)
+texture_base = ExtResource("36_7ks5d")
+texture_hovered = ExtResource("37_6c0jx")
 
 [node name="fil" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+position = Vector2(214, 433)
 
 [node name="ram" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+position = Vector2(656, -380)
+texture_base = ExtResource("38_3qn4b")
+texture_hovered = ExtResource("39_8ybyg")
 
 [node name="gpu" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+position = Vector2(886, 348)
 
 [node name="ventilo" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+position = Vector2(-395, 418)
+texture_base = ExtResource("40_ud70d")
+texture_hovered = ExtResource("41_h7c5x")
 
 [node name="grille" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+position = Vector2(-542, -78)
 
 [node name="bouton" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+position = Vector2(576, 389)
+texture_base = ExtResource("42_hs3cd")
+texture_hovered = ExtResource("43_0bihv")
 
 [node name="enceinte" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+position = Vector2(323, -404)
 
 [node name="dessous_de_plat" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+position = Vector2(-158, 438)
 
 [node name="jack" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+position = Vector2(0, -397)
+texture_base = ExtResource("44_pviy0")
+texture_hovered = ExtResource("45_udkw3")
 
 [node name="Audio" parent="." instance=ExtResource("36_8011r")]
 
