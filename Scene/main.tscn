@@ -1,15 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://l8h8qx88wcyo"]
+[gd_scene load_steps=9 format=3 uid="uid://l8h8qx88wcyo"]
 
 [ext_resource type="Script" path="res://Script/main.gd" id="1_cnk85"]
 [ext_resource type="Texture2D" uid="uid://dit33rdmvrsr7" path="res://Assets/Visuel/vista 1080.png" id="3_ko6i4"]
 [ext_resource type="PackedScene" uid="uid://b1bu8m14gmsvv" path="res://Scene/robot.tscn" id="4_4l8r2"]
 [ext_resource type="VideoStream" path="res://Assets/boot_up_vista_1080.ogv" id="4_57r0x"]
+[ext_resource type="Texture2D" uid="uid://5j4qrqn2eext" path="res://Assets/Visuel/starlink dl_window.png" id="5_ky0b6"]
+[ext_resource type="Texture2D" uid="uid://csfypjidq8nne" path="res://Assets/Visuel/starlink progress bar mask.png" id="6_g4r3j"]
+[ext_resource type="FontFile" uid="uid://06tukd20hnrd" path="res://Assets/Visuel/calibri.otf" id="7_7liyl"]
+[ext_resource type="Texture2D" uid="uid://cs65ndtv5yi8c" path="res://Assets/Visuel/progressbar.png" id="8_15mye"]
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("robot", "end_timer")]
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("robot", "end_timer", "download_window", "prog_bar")]
 script = ExtResource("1_cnk85")
 robot = NodePath("Robot")
 end_timer_time = 5.0
 end_timer = NodePath("End_timer")
+download_window = NodePath("DL_window")
+prog_bar = NodePath("DL_window/TextureProgressBar")
+
 
 [node name="End_timer" type="Timer" parent="."]
 one_shot = true
@@ -41,5 +48,45 @@ layout_mode = 2
 stream = ExtResource("4_57r0x")
 
 [node name="Robot" parent="." instance=ExtResource("4_4l8r2")]
+
+position = Vector2(-198, -26)
+
+[node name="DL_window" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(572, 206)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_ky0b6")
+
+[node name="DL_window_mask" type="Sprite2D" parent="DL_window"]
+visible = false
+position = Vector2(7, 117)
+texture = ExtResource("6_g4r3j")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DL_window"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -455.5
+offset_top = -87.5
+offset_right = -370.5
+offset_bottom = -60.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_7liyl")
+theme_override_font_sizes/normal_font_size = 23
+text = "5 min"
+tab_size = 6
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="DL_window"]
+offset_left = -423.333
+offset_top = 80.0
+offset_right = 435.667
+offset_bottom = 153.0
+max_value = 300.0
+texture_under = ExtResource("6_g4r3j")
+texture_progress = ExtResource("8_15mye")
 
 [connection signal="timeout" from="End_timer" to="." method="_on_end_timer_timeout"]
