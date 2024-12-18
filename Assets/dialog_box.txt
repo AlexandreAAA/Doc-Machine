@@ -4,6 +4,12 @@ test_2
 	marche t-il
 enerve
 	TUMENERVES LA DIS DONC
+Intro
+	“Huh ? Hein ? Quoi ? Non ! Qu’est-ce que tu as fait ? Le téléchargement va reprendre !!”
+Intro2
+	Faut que tu m’aides ! Ils vont m’installer des drivers pour me connecter au cloud !!”
+	“Je suis le dernier ordinateur encore physique ! Ils rendront mes circuits inutilisables !!!”
+	“Il faut que tu fasses diverger le courant électrique en touchant mes composants !”
 IdleIE
 	Aidez-moi, je vous en supplie ! Ils vont me remettre Internet Explorer en navigateur par défaut !
 IdleDEFRAG

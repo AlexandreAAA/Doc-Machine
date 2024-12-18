@@ -16,8 +16,8 @@ func _ready() -> void:
 	end_timer.start(end_timer_time)
 	download_window.transform.origin = Vector2(600,600)
 	download_window.scale = Vector2(0.1, 0.1)
+	robot.scale = Vector2(0.1, 0.1)
 	destination = Vector2(600,80)
-	speed = 1500.0
 	
 func _process(delta: float) -> void:
 	if !dl_started :
@@ -36,6 +36,12 @@ func dl_start():
 	var tween = get_tree().create_tween()
 	tween.parallel().tween_property(download_window,"position", destination, 0.3)
 	tween.parallel().tween_property(download_window,"scale", Vector2(0.6, 0.6), 0.3)
+	await get_tree().create_timer(2).timeout
+	var robo_tween = get_tree().create_tween()
+	robo_tween.parallel().tween_property($Robot,"position", Vector2(-200,60), 0.1)
+	robo_tween.parallel().tween_property($Robot,"scale", Vector2(1, 1), 0.1)
+	robot.talk("Intro")
+
 	
 func update_displayed_time():
 	dl_time_display.text = str(snapped(end_timer.time_left/60, 0.01)) + " minutes restantes"
