@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://xs11adfm01av"
+path="res://.godot/imported/BadVirus.ogg-a22ce96160f1108816a55f51968cb13b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/BadVirus.ogg"
+dest_files=["res://.godot/imported/BadVirus.ogg-a22ce96160f1108816a55f51968cb13b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

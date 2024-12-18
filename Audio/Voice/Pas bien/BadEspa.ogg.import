@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dcwhtvfa1g6e0"
+path="res://.godot/imported/BadEspa.ogg-0d698a7ae7ce8000102b65b88f87fb6c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/BadEspa.ogg"
+dest_files=["res://.godot/imported/BadEspa.ogg-0d698a7ae7ce8000102b65b88f87fb6c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
