@@ -16,6 +16,7 @@ end_timer = NodePath("End_timer")
 download_window = NodePath("DL_window")
 prog_bar = NodePath("DL_window/TextureProgressBar")
 dl_time_display = NodePath("DL_window/RichTextLabel")
+dl_started = true
 
 [node name="End_timer" type="Timer" parent="."]
 one_shot = true
@@ -88,3 +89,4 @@ texture_under = ExtResource("6_g4r3j")
 texture_progress = ExtResource("8_15mye")
 
 [connection signal="timeout" from="End_timer" to="." method="_on_end_timer_timeout"]
+[connection signal="finished" from="AspectRatioContainer/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

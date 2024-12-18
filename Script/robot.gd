@@ -7,6 +7,7 @@ extends Node2D
 @export var timer_idle : Timer
 @export var timer_transi_end : Timer
 @export var timer_idle_time := 5.0
+@export var fenetre_handler : Node2D
 var victory_condition : Array[bool]
 var input_table : Array[bool]
 var once_dialog_array : Array[bool]
@@ -69,8 +70,9 @@ func choose_random_input():
 		input_table[ran] = true
 		
 func check_input_table(event):
-	if !dialog.has_text:
-		if event.is_action_pressed("ram"):
+	if event.is_action_pressed("ram"):
+		fenetre_handler.scale_up(0)
+		if !dialog.has_text:
 			if once_dialog_array[0]:
 				once_dialog_array[0] = false
 				input_table[0] = false
@@ -78,7 +80,11 @@ func check_input_table(event):
 					talk("GoodRam")
 				else:
 					talk("BadRam")
-		if event.is_action_pressed("jack"):
+	if event.is_action_released("ram"):
+		fenetre_handler.scale_down(0)
+	if event.is_action_pressed("jack"):
+		fenetre_handler.scale_up(1)
+		if !dialog.has_text:
 			if once_dialog_array[1]:
 				once_dialog_array[1] = false
 				input_table[1] = false
@@ -87,7 +93,11 @@ func check_input_table(event):
 					talk("GoodJack")
 				else:
 					talk("BadJack")
-		if event.is_action_pressed("ventilo"):
+	if event.is_action_released("jack"):
+		fenetre_handler.scale_down(1)
+	if event.is_action_pressed("ventilo"):
+		fenetre_handler.scale_up(2)
+		if !dialog.has_text:
 			if once_dialog_array[2]:
 				once_dialog_array[2] = false
 				input_table[2] = false
@@ -95,7 +105,11 @@ func check_input_table(event):
 					talk("GoodVentilo")
 				else:
 					talk("BadVentilo")
-		if event.is_action_pressed("dessous_de_plat"):
+	if event.is_action_released("ventilo"):
+		fenetre_handler.scale_down(2)
+	if event.is_action_pressed("dessous_de_plat"):
+		fenetre_handler.scale_up(3)
+		if !dialog.has_text:
 			if once_dialog_array[3]:
 				once_dialog_array[3] = false
 				input_table[3] = false
@@ -103,7 +117,11 @@ func check_input_table(event):
 					talk("GoodDessous_de_plat")
 				else:
 					talk("BadDessous_de_plat")
-		if event.is_action_pressed("gpu"):
+	if event.is_action_released("dessous_de_plat"):
+		fenetre_handler.scale_down(3)
+	if event.is_action_pressed("gpu"):
+		fenetre_handler.scale_up(4)
+		if !dialog.has_text:
 			if once_dialog_array[4]:
 				once_dialog_array[4] = false
 				input_table[4] = false
@@ -111,7 +129,11 @@ func check_input_table(event):
 					talk("GoodGpu")
 				else:
 					talk("BadGpu")
-		if event.is_action_pressed("cable_alu"):
+	if event.is_action_released("gpu"):
+		fenetre_handler.scale_down(4)
+	if event.is_action_pressed("cable_alu"):
+		fenetre_handler.scale_up(5)
+		if !dialog.has_text:
 			if once_dialog_array[5]:
 				once_dialog_array[5] = false
 				input_table[5] = false
@@ -119,7 +141,11 @@ func check_input_table(event):
 					talk("GoodCable_alu")
 				else:
 					talk("BadCable_alu")
-		if event.is_action_pressed("enceinte"):
+	if event.is_action_released("cable_alu"):
+		fenetre_handler.scale_down(5)
+	if event.is_action_pressed("enceinte"):
+		fenetre_handler.scale_up(6)
+		if !dialog.has_text:
 			if once_dialog_array[6]:
 				once_dialog_array[6] = false
 				input_table[6] = false
@@ -127,7 +153,11 @@ func check_input_table(event):
 					talk("GoodEnceinte")
 				else:
 					talk("BadEnceinte")
-		if event.is_action_pressed("bouton"):
+	if event.is_action_released("enceinte"):
+		fenetre_handler.scale_down(6)
+	if event.is_action_pressed("bouton"):
+		fenetre_handler.scale_up(7)
+		if !dialog.has_text:
 			if once_dialog_array[7]:
 				once_dialog_array[7] = false
 				input_table[7] = false
@@ -135,7 +165,11 @@ func check_input_table(event):
 					talk("GoodBouton")
 				else:
 					talk("BadBouton")
-		if event.is_action_pressed("fil"):
+	if event.is_action_released("bouton"):
+		fenetre_handler.scale_down(7)
+	if event.is_action_pressed("fil"):
+		fenetre_handler.scale_up(8)
+		if !dialog.has_text:
 			if once_dialog_array[8]:
 				once_dialog_array[8] = false
 				input_table[8] = false
@@ -143,7 +177,11 @@ func check_input_table(event):
 					talk("GoodFil")
 				else:
 					talk("BadFil")
-		if event.is_action_pressed("grille"):
+	if event.is_action_released("fil"):
+		fenetre_handler.scale_down(8)
+	if event.is_action_pressed("grille"):
+		fenetre_handler.scale_up(9)
+		if !dialog.has_text:
 			if once_dialog_array[9]:
 				once_dialog_array[9] = false
 				input_table[9] = false
@@ -151,6 +189,8 @@ func check_input_table(event):
 					talk("GoodGrille")
 				else:
 					talk("BadGrille")
+	if event.is_action_released("grille"):
+		fenetre_handler.scale_down(9)
 
 func check_victory() -> bool:
 	if input_table.count(true) == 0:

@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://cekpjldiadjhk"]
+
+[ext_resource type="Texture2D" uid="uid://y50n5yrahh16" path="res://Assets/Visuel/vista_window.png" id="1_3fv8n"]
+[ext_resource type="Texture2D" uid="uid://5j4qrqn2eext" path="res://Assets/Visuel/starlink dl_window.png" id="2_16ibe"]
+[ext_resource type="Texture2D" uid="uid://cbupclrnfc2pn" path="res://Assets/Visuel/starlink download window.png" id="3_ko2d2"]
+[ext_resource type="Script" path="res://Script/fenetre.gd" id="4_2plnh"]
+[ext_resource type="Texture2D" uid="uid://bkgsiqht61k2b" path="res://Assets/Visuel/smile.png" id="5_oxwmj"]
+[ext_resource type="Texture2D" uid="uid://rvml2c5axvb3" path="res://Assets/Visuel/smile_talk.png" id="6_qjjh7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_idlb0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3fv8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_16ibe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ko2d2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fenetre" type="AnimatedSprite2D" node_paths=PackedStringArray("base", "hovered")]
+z_index = -1
+z_as_relative = false
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_idlb0")
+script = ExtResource("4_2plnh")
+texture_base = ExtResource("5_oxwmj")
+texture_hovered = ExtResource("6_qjjh7")
+base = NodePath("Base")
+hovered = NodePath("Hovered")
+
+[node name="Base" type="Sprite2D" parent="."]
+z_index = 1
+z_as_relative = false
+
+[node name="Hovered" type="Sprite2D" parent="."]
+visible = false
+z_index = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://b1bu8m14gmsvv"]
+[gd_scene load_steps=39 format=3 uid="uid://b1bu8m14gmsvv"]
 
 [ext_resource type="Script" path="res://Script/robot.gd" id="1_6dm20"]
 [ext_resource type="Texture2D" uid="uid://cy4wvrciqtja3" path="res://Assets/Visuel/placeholder_eye_2.png" id="2_ka5wi"]
@@ -33,6 +33,8 @@
 [ext_resource type="Texture2D" uid="uid://dturt61qaqroq" path="res://Assets/Visuel/Bouche/bouche_moustache.png" id="29_v8w3j"]
 [ext_resource type="Texture2D" uid="uid://dlrtc8rh1lkjj" path="res://Assets/Visuel/Bouche/bouche_triste.png" id="30_10w7s"]
 [ext_resource type="Texture2D" uid="uid://y50n5yrahh16" path="res://Assets/Visuel/vista_window.png" id="33_u2yv8"]
+[ext_resource type="Script" path="res://Script/handler_fenetre.gd" id="34_2gxvx"]
+[ext_resource type="PackedScene" uid="uid://cekpjldiadjhk" path="res://Scene/fenetre.tscn" id="34_20iq8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vepv7"]
 animations = [{
@@ -199,7 +201,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Robot" type="Node2D" node_paths=PackedStringArray("dialog", "left_eye_sprite", "right_eye_sprite", "mouth_sprite", "timer_idle", "timer_transi_end")]
+[node name="Robot" type="Node2D" node_paths=PackedStringArray("dialog", "left_eye_sprite", "right_eye_sprite", "mouth_sprite", "timer_idle", "timer_transi_end", "fenetre_handler")]
 script = ExtResource("1_6dm20")
 dialog = NodePath("Dialog_Control")
 left_eye_sprite = NodePath("VistaWindow/Node2D/Left_Eye")
@@ -208,6 +210,7 @@ mouth_sprite = NodePath("VistaWindow/Node2D/Mouth")
 timer_idle = NodePath("Timer_idle")
 timer_transi_end = NodePath("Timer_Transi_End")
 timer_idle_time = 20.0
+fenetre_handler = NodePath("Icones_objets")
 size_input_table = 10
 metadata/_edit_horizontal_guides_ = [221.0]
 
@@ -251,6 +254,41 @@ offset_bottom = -283.0
 [node name="Timer_Transi_End" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
+
+[node name="Icones_objets" type="Node2D" parent="." node_paths=PackedStringArray("cable_alu", "fil", "ram", "gpu", "ventilo", "grille", "bouton", "enceinte", "dessous_de_plat", "jack")]
+script = ExtResource("34_2gxvx")
+cable_alu = NodePath("cable_alu")
+fil = NodePath("fil")
+ram = NodePath("ram")
+gpu = NodePath("gpu")
+ventilo = NodePath("ventilo")
+grille = NodePath("grille")
+bouton = NodePath("bouton")
+enceinte = NodePath("enceinte")
+dessous_de_plat = NodePath("dessous_de_plat")
+jack = NodePath("jack")
+
+[node name="cable_alu" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+texture_base = ExtResource("3_pguk4")
+texture_hovered = ExtResource("2_ka5wi")
+
+[node name="fil" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+
+[node name="ram" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+
+[node name="gpu" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+
+[node name="ventilo" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+
+[node name="grille" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+
+[node name="bouton" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+
+[node name="enceinte" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+
+[node name="dessous_de_plat" parent="Icones_objets" instance=ExtResource("34_20iq8")]
+
+[node name="jack" parent="Icones_objets" instance=ExtResource("34_20iq8")]
 
 [connection signal="timeout" from="Timer_idle" to="." method="_on_timer_idle_timeout"]
 [connection signal="timeout" from="Timer_Transi_End" to="." method="_on_timer_transi_end_timeout"]

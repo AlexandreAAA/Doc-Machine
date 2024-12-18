@@ -24,8 +24,6 @@ func _process(delta: float) -> void:
 		dl_start()
 	prog_bar.value = (end_timer_time - end_timer.time_left)
 	update_displayed_time()
-	if end_timer.time_left <= 110:
-		pass
 
 func _on_end_timer_timeout() -> void:
 	robot.ending(false)
@@ -45,3 +43,7 @@ func dl_start():
 	
 func update_displayed_time():
 	dl_time_display.text = str(snapped(end_timer.time_left/60, 0.01)) + " minutes restantes"
+
+
+func _on_video_stream_player_finished() -> void:
+	dl_started = false
