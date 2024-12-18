@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bgimjug0v3ixy"
+path="res://.godot/imported/BadTerm (1).ogg-5058fcd75666108380ab5b41fc194752.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/BadTerm (1).ogg"
+dest_files=["res://.godot/imported/BadTerm (1).ogg-5058fcd75666108380ab5b41fc194752.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

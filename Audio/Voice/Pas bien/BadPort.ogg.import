@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ddar8am3ba1ef"
+path="res://.godot/imported/BadPort.ogg-554d0b0e28336fd35d09594d2cd52e0e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/BadPort.ogg"
+dest_files=["res://.godot/imported/BadPort.ogg-554d0b0e28336fd35d09594d2cd52e0e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
