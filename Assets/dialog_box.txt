@@ -56,7 +56,7 @@ GoodJack
 	Vous êtes drôlement branché·e, vous savez ? On sent que vous avez beaucoup d’expérience avec les ordinateurs...
 BadEnding
 	Je suis désolé... Je crois que c’est fini... Ce satané setup wizard m’a eu... Désormais se termine mon existence de poste de travail libre et indépendant... Il ne restera plus d’autre vie dans mes circuits... Que les 3 familles d’araignées et les 251 espèces d’acariens qui y avaient élu domicile... Adieu, Clippy... Adieu, humain·e... Dites à Bill Gates que j-
-GoodEnding
+GoodEnding1
 	Qu’est-ce que... Je ? Je ne suis pas connecté au réseau ? Ma conscience n’a pas disparu dans les méandres numériques de l’hégémonie néolibérale ? Ha. ha. Bien fait pour toi, Elon. Ton entreprise est spatiale mais ton seum qui est galactique.
 GoodEnding2
 	...

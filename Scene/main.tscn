@@ -12,11 +12,9 @@
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("robot", "end_timer", "download_window", "prog_bar")]
 script = ExtResource("1_cnk85")
 robot = NodePath("Robot")
-end_timer_time = 5.0
 end_timer = NodePath("End_timer")
 download_window = NodePath("DL_window")
 prog_bar = NodePath("DL_window/TextureProgressBar")
-
 
 [node name="End_timer" type="Timer" parent="."]
 one_shot = true
@@ -48,7 +46,6 @@ layout_mode = 2
 stream = ExtResource("4_57r0x")
 
 [node name="Robot" parent="." instance=ExtResource("4_4l8r2")]
-
 position = Vector2(-198, -26)
 
 [node name="DL_window" type="Sprite2D" parent="."]
