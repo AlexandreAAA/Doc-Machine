@@ -240,33 +240,6 @@ frame = 2
 [node name="Timer_idle" type="Timer" parent="."]
 autostart = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(30, 30)
-
-[node name="Vista1080" type="Sprite2D" parent="."]
-z_index = -2
-position = Vector2(31, 30)
-texture = ExtResource("35_uevlj")
-metadata/_edit_lock_ = true
-
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
-layout_direction = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -929.0
-offset_top = -504.0
-offset_right = 991.0
-offset_bottom = 576.0
-grow_horizontal = 2
-grow_vertical = 2
-ratio = 1.7778
-metadata/_edit_lock_ = true
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
-layout_mode = 2
-stream = ExtResource("35_fknl1")
-
 [node name="Dialog_Control" parent="." instance=ExtResource("4_50f1p")]
 z_index = -1
 offset_left = -863.0
