@@ -24,7 +24,8 @@ func _ready() -> void:
 	victory_condition.resize(size_input_table)
 	timer_idle.wait_time = timer_idle_time
 	choose_random_input()
-	victory_condition = input_table
+	for k in size_input_table :
+		victory_condition[k] = input_table[k]
 	for j in dialog.dialog_dico.keys():
 		if str(j).get_slice("e",0) == "Idl":
 			idle_dialog.append(j)
