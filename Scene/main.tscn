@@ -45,6 +45,7 @@ ratio = 1.7778
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
 layout_mode = 2
 stream = ExtResource("4_57r0x")
+autoplay = true
 
 [node name="Robot" parent="." instance=ExtResource("4_4l8r2")]
 position = Vector2(-291, 919)
@@ -87,5 +88,11 @@ max_value = 300.0
 texture_under = ExtResource("6_g4r3j")
 texture_progress = ExtResource("8_15mye")
 
+[node name="Startup_timer" type="Timer" parent="."]
+wait_time = 13.0
+one_shot = true
+autostart = true
+
 [connection signal="timeout" from="End_timer" to="." method="_on_end_timer_timeout"]
 [connection signal="finished" from="AspectRatioContainer/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="timeout" from="Startup_timer" to="." method="_on_startup_timer_timeout"]

@@ -10,7 +10,7 @@ func _ready() -> void:
 	hovered.texture = texture_hovered
 
 func hovering():
-	scale = Vector2(1.2,1.2)
+	scale = Vector2(0.4,0.4)
 	base.hide()
 	hovered.show()
 	#var tween = get_tree().create_tween()
@@ -23,3 +23,9 @@ func dehovering():
 	#var tweeen = get_tree().create_tween()
 	#tweeen.tween_property(self, "scale", Vector2(0.3,0.3),0.1)
 	
+
+func background_red():
+	frame = 2
+
+func background_green():
+	frame = 1

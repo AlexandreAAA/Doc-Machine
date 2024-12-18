@@ -11,9 +11,9 @@ extends Node2D
 @export var MusicStream : AudioStreamPlayer2D
 
 @export var debug : bool
-
+var name_audio : String
 var bloquant = false
-
+signal fini_de_jouer(audio_joue)
 var VoiceSyntheseBank = {}
 var VoiceBank = {}
 
@@ -175,6 +175,7 @@ func _process(delta: float) -> void:
 		_playAtInput()
 
 func _playVoiceLine(voiceBankKey : String, is_blocking : bool) -> void :
+	name_audio = voiceBankKey
 	VoiceStream.stream = VoiceBank[voiceBankKey]
 	bloquant = is_blocking
 	VoiceStream.play()
@@ -186,3 +187,6 @@ func _playSynthVoiceLine(synthVoiceBankKey : String, is_blocking : bool) -> void
 
 func _on_voice_stream_finished() -> void:
 	bloquant = false
+	if name_audio == "VoiceOutroBad" :
+		_playVoiceLine("VoiceOutroGood", true)
+		fini_de_jouer.emit("VoiceOutroGood")

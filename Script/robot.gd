@@ -74,6 +74,7 @@ func choose_random_input():
 	while input_table.count(true) != nb_victory_condition :
 		var ran = randi_range(0,size_input_table - 1)
 		input_table[ran] = true
+		fenetre_handler.tab_fenetre[ran].background_red()
 		
 func check_input_table(event):
 	if event.is_action_pressed("ram"):
@@ -87,10 +88,12 @@ func check_input_table(event):
 					rotate_sprite(0,0,0)
 					talk("GoodRam")
 					audio._playVoiceLine("GoodRam",true)
+					fenetre_handler.tab_fenetre[0].background_green()
 				else:
 					change_sprite(5,5,4)
 					rotate_sprite(0,0,0)
 					talk("BadRam")
+					audio.ErrorStream.play()
 					audio._playVoiceLine("BadRam",true)
 	if event.is_action_released("ram"):
 		fenetre_handler.scale_down(0)
@@ -106,10 +109,12 @@ func check_input_table(event):
 					change_sprite(15,15,9)
 					talk("GoodJack")
 					audio._playVoiceLine("GoodJack",true)
+					fenetre_handler.tab_fenetre[1].background_green()
 				else:
 					rotate_sprite(0,0,180)
 					change_sprite(6,7,7)
 					talk("BadJack")
+					audio.ErrorStream.play()
 					audio._playVoiceLine("BadJack",true)
 	if event.is_action_released("jack"):
 		fenetre_handler.scale_down(1)
@@ -124,10 +129,12 @@ func check_input_table(event):
 					change_sprite(11,10,2)
 					talk("GoodVentilo")
 					audio._playVoiceLine("GoodVentilo",true)
+					fenetre_handler.tab_fenetre[2].background_green()
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(13,13,1)
 					talk("BadVentilo")
+					audio.ErrorStream.play()
 					audio._playVoiceLine("BadVentilo",true)
 	if event.is_action_released("ventilo"):
 		fenetre_handler.scale_down(2)
@@ -142,9 +149,11 @@ func check_input_table(event):
 					rotate_sprite(180,180,0)
 					talk("GoodDessous_de_plat")
 					audio._playVoiceLine("GoodDessous_de_plat",true)
+					fenetre_handler.tab_fenetre[3].background_green()
 				else:
 					change_sprite(3,3,2)
 					talk("BadDessous_de_plat")
+					audio.ErrorStream.play()
 					audio._playVoiceLine("BadDessous_de_plat",true)
 	if event.is_action_released("dessous_de_plat"):
 		fenetre_handler.scale_down(3)
@@ -159,10 +168,12 @@ func check_input_table(event):
 					rotate_sprite(0,0,180)
 					talk("GoodGpu")
 					audio._playVoiceLine("GoodGpu",true)
+					fenetre_handler.tab_fenetre[4].background_green()
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(16,16,2)
 					talk("BadGpu")
+					audio.ErrorStream.play()
 					audio._playVoiceLine("BadGpu",true)
 	if event.is_action_released("gpu"):
 		fenetre_handler.scale_down(4)
@@ -177,10 +188,12 @@ func check_input_table(event):
 					rotate_sprite(0,0,180)
 					talk("GoodCable_alu")
 					audio._playVoiceLine("GoodCable_alu",true)
+					fenetre_handler.tab_fenetre[5].background_green()
 				else:
 					change_sprite(4,4,3)
 					rotate_sprite(180,180,0)
 					talk("BadCable_alu")
+					audio.ErrorStream.play()
 					audio._playVoiceLine("BadCable_alu", true)
 	if event.is_action_released("cable_alu"):
 		fenetre_handler.scale_down(5)
@@ -195,10 +208,12 @@ func check_input_table(event):
 					change_sprite(1,2,0)
 					talk("GoodEnceinte") #garder les mains
 					audio._playVoiceLine("GoodEnceinte", true)
+					fenetre_handler.tab_fenetre[6].background_green()
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(1,2,8)
 					talk("BadEnceinte") #espagnol
+					audio.ErrorStream.play()
 					audio._playVoiceLine("BadEnceinte", true)
 	if event.is_action_released("enceinte"):
 		fenetre_handler.scale_down(6)
@@ -213,10 +228,12 @@ func check_input_table(event):
 					rotate_sprite(0,0,180)
 					talk("GoodBouton")
 					audio._playVoiceLine("GoodBouton", true)
+					fenetre_handler.tab_fenetre[7].background_green()
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(10,11,5)
 					talk("BadBouton")
+					audio.ErrorStream.play()
 					audio._playVoiceLine("BadBouton",true)
 	if event.is_action_released("bouton"):
 		fenetre_handler.scale_down(7)
@@ -231,10 +248,12 @@ func check_input_table(event):
 					change_sprite(15,15,0)
 					talk("GoodFil") #doigté
 					audio._playVoiceLine("GoodFil",true)
+					fenetre_handler.tab_fenetre[8].background_green()
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(5,5,4)
 					talk("BadFil") #faux contact
+					audio.ErrorStream.play()
 					audio._playVoiceLine("BadFil",true)
 	if event.is_action_released("fil"):
 		fenetre_handler.scale_down(8)
@@ -249,10 +268,12 @@ func check_input_table(event):
 					rotate_sprite(0,0,180)
 					talk("GoodGrille") #chatouille gratouille
 					audio._playVoiceLine("GoodGrille",true)
+					fenetre_handler.tab_fenetre[9].background_green()
 				else:
 					change_sprite(14,14,3)
 					rotate_sprite(0,0,180)
 					talk("BadGrille") #plafond
+					audio.ErrorStream.play()
 					audio._playVoiceLine("BadGrille",true)
 	if event.is_action_released("grille"):
 		fenetre_handler.scale_down(9)
@@ -268,6 +289,8 @@ func ending(twis  = false) :
 	change_sprite(7,6,9)
 	rotate_sprite(0,0,0)
 	talk("BadEnding")
+	audio._playVoiceLine("VoiceOutroBad")
+	audio._musicStop()
 	
 func end_text_ending():
 	if end_game and goodendingfin != true:
@@ -282,7 +305,9 @@ func _on_timer_idle_timeout() -> void:
 		dialog.set_dialog_text(idle_dialog[idle_dialog_index])
 		audio._playVoiceLine(idle_dialog[idle_dialog_index],false)
 		idle_dialog_index += 1
-
+func _fini_de_jouer(audio_joue):
+	if audio_joue == "VoiceOutroBad":
+		pass
 func _on_timer_transi_end_timeout() -> void:
 	if twist :
 		#BONNE FIN
@@ -300,6 +325,7 @@ func _on_timer_transi_end_timeout() -> void:
 			change_sprite(0,0,2)
 			rotate_sprite(0,0,0)
 			talk("GoodEnding1")
+			audio.TadaStream.play()
 			goodending2 = true
 	else :
 		#MAUVAISE FIN
