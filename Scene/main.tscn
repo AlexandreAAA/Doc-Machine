@@ -16,7 +16,6 @@ end_timer = NodePath("End_timer")
 download_window = NodePath("DL_window")
 prog_bar = NodePath("DL_window/TextureProgressBar")
 dl_time_display = NodePath("DL_window/RichTextLabel")
-dl_started = true
 
 [node name="End_timer" type="Timer" parent="."]
 one_shot = true

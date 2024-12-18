@@ -74,6 +74,7 @@ func choose_random_input():
 	while input_table.count(true) != nb_victory_condition :
 		var ran = randi_range(0,size_input_table - 1)
 		input_table[ran] = true
+		fenetre_handler.tab_fenetre[ran].background_red()
 		
 func check_input_table(event):
 	if event.is_action_pressed("ram"):
@@ -87,6 +88,7 @@ func check_input_table(event):
 					rotate_sprite(0,0,0)
 					talk("GoodRam")
 					audio._playVoiceLine("GoodRam",true)
+					fenetre_handler.tab_fenetre[0].background_green()
 				else:
 					change_sprite(5,5,4)
 					rotate_sprite(0,0,0)
@@ -107,6 +109,7 @@ func check_input_table(event):
 					change_sprite(15,15,9)
 					talk("GoodJack")
 					audio._playVoiceLine("GoodJack",true)
+					fenetre_handler.tab_fenetre[1].background_green()
 				else:
 					rotate_sprite(0,0,180)
 					change_sprite(6,7,7)
@@ -126,6 +129,7 @@ func check_input_table(event):
 					change_sprite(11,10,2)
 					talk("GoodVentilo")
 					audio._playVoiceLine("GoodVentilo",true)
+					fenetre_handler.tab_fenetre[2].background_green()
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(13,13,1)
@@ -145,6 +149,7 @@ func check_input_table(event):
 					rotate_sprite(180,180,0)
 					talk("GoodDessous_de_plat")
 					audio._playVoiceLine("GoodDessous_de_plat",true)
+					fenetre_handler.tab_fenetre[3].background_green()
 				else:
 					change_sprite(3,3,2)
 					talk("BadDessous_de_plat")
@@ -163,6 +168,7 @@ func check_input_table(event):
 					rotate_sprite(0,0,180)
 					talk("GoodGpu")
 					audio._playVoiceLine("GoodGpu",true)
+					fenetre_handler.tab_fenetre[4].background_green()
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(16,16,2)
@@ -182,6 +188,7 @@ func check_input_table(event):
 					rotate_sprite(0,0,180)
 					talk("GoodCable_alu")
 					audio._playVoiceLine("GoodCable_alu",true)
+					fenetre_handler.tab_fenetre[5].background_green()
 				else:
 					change_sprite(4,4,3)
 					rotate_sprite(180,180,0)
@@ -201,6 +208,7 @@ func check_input_table(event):
 					change_sprite(1,2,0)
 					talk("GoodEnceinte") #garder les mains
 					audio._playVoiceLine("GoodEnceinte", true)
+					fenetre_handler.tab_fenetre[6].background_green()
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(1,2,8)
@@ -220,6 +228,7 @@ func check_input_table(event):
 					rotate_sprite(0,0,180)
 					talk("GoodBouton")
 					audio._playVoiceLine("GoodBouton", true)
+					fenetre_handler.tab_fenetre[7].background_green()
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(10,11,5)
@@ -239,6 +248,7 @@ func check_input_table(event):
 					change_sprite(15,15,0)
 					talk("GoodFil") #doigté
 					audio._playVoiceLine("GoodFil",true)
+					fenetre_handler.tab_fenetre[8].background_green()
 				else:
 					rotate_sprite(0,0,0)
 					change_sprite(5,5,4)
@@ -258,6 +268,7 @@ func check_input_table(event):
 					rotate_sprite(0,0,180)
 					talk("GoodGrille") #chatouille gratouille
 					audio._playVoiceLine("GoodGrille",true)
+					fenetre_handler.tab_fenetre[9].background_green()
 				else:
 					change_sprite(14,14,3)
 					rotate_sprite(0,0,180)
@@ -294,7 +305,9 @@ func _on_timer_idle_timeout() -> void:
 		dialog.set_dialog_text(idle_dialog[idle_dialog_index])
 		audio._playVoiceLine(idle_dialog[idle_dialog_index],false)
 		idle_dialog_index += 1
-
+func _fini_de_jouer(audio_joue):
+	if audio_joue == "VoiceOutroBad":
+		pass
 func _on_timer_transi_end_timeout() -> void:
 	if twist :
 		#BONNE FIN
