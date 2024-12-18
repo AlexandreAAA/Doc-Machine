@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://7vq7ye1pmk8y"
+path="res://.godot/imported/BadEnceinte.ogg-6c82c657ae766af2b79119bd7a84dec3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/BadEnceinte.ogg"
+dest_files=["res://.godot/imported/BadEnceinte.ogg-6c82c657ae766af2b79119bd7a84dec3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

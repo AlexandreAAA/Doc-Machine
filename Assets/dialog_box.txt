@@ -54,3 +54,7 @@ GoodDessous_de_plat
 	J’ai jamais compris pourquoi y avait un dessous de plat la dedans, ils avaient cru quoi, que j’étais un four ? Remarque vu comment j’avais chaud...
 GoodJack
 	Vous êtes drôlement branché·e, vous savez ? On sent que vous avez beaucoup d’expérience avec les ordinateurs...
+IntroPreDL
+	Huh ? Hein ? Quoi ? Non ! Qu’est-ce que vous avez fait ? Le téléchargement va reprendre !!
+IntrPostDL
+	Faut que tu m’aides ! Ils vont m’installer des drivers pour me connecter au cloud !! Je suis le dernier ordinateur encore physique ! Ils rendront mes circuits inutilisables !!! Il faut que tu fasses diverger le courant électrique en touchant mes composants !

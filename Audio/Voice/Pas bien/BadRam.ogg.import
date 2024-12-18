@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c6mfkolvutv75"
+path="res://.godot/imported/BadRam.ogg-7a73d527a555395d0650a75f1b7a239e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/BadRam.ogg"
+dest_files=["res://.godot/imported/BadRam.ogg-7a73d527a555395d0650a75f1b7a239e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

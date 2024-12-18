@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://caedam5oiuepf"
+path="res://.godot/imported/BadFil.ogg-e335b1b3607c132094d339e7db876abb.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Voice/Pas bien/BadFil.ogg"
+dest_files=["res://.godot/imported/BadFil.ogg-e335b1b3607c132094d339e7db876abb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
