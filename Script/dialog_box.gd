@@ -10,7 +10,7 @@ var has_text = false
 var text_to_print = []
 
 # temps_apparition contrôle après combien d'image la prochaine lettre du texte apparait
-@export var temps_apparition := 80
+@export var temps_apparition := 2
 
 signal finished_talking
 

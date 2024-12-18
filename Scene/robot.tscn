@@ -103,10 +103,13 @@ animations = [{
 "texture": ExtResource("2_y6ufc")
 }, {
 "duration": 1.0,
+"texture": ExtResource("3_btpc7")
+}, {
+"duration": 1.0,
 "texture": ExtResource("4_qajsd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_btpc7")
+"texture": ExtResource("5_6nvp5")
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_hxxql")
@@ -131,9 +134,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_uvja1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_6nvp5")
 }, {
 "duration": 1.0,
 "texture": ExtResource("14_6uoc8")
