@@ -199,13 +199,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Robot" type="Node2D" node_paths=PackedStringArray("dialog", "left_eye_sprite", "right_eye_sprite", "mouth_sprite", "timer_idle")]
+[node name="Robot" type="Node2D" node_paths=PackedStringArray("dialog", "left_eye_sprite", "right_eye_sprite", "mouth_sprite", "timer_idle", "timer_transi_end")]
 script = ExtResource("1_6dm20")
 dialog = NodePath("Dialog_Control")
 left_eye_sprite = NodePath("VistaWindow/Node2D/Left_Eye")
 right_eye_sprite = NodePath("VistaWindow/Node2D/Right_Eye")
 mouth_sprite = NodePath("VistaWindow/Node2D/Mouth")
 timer_idle = NodePath("Timer_idle")
+timer_transi_end = NodePath("Timer_Transi_End")
 timer_idle_time = 20.0
 size_input_table = 10
 metadata/_edit_horizontal_guides_ = [221.0]
@@ -247,4 +248,9 @@ offset_top = -283.0
 offset_right = -766.0
 offset_bottom = -283.0
 
+[node name="Timer_Transi_End" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="timeout" from="Timer_idle" to="." method="_on_timer_idle_timeout"]
+[connection signal="timeout" from="Timer_Transi_End" to="." method="_on_timer_transi_end_timeout"]
