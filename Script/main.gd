@@ -46,12 +46,15 @@ func intro():
 	robot.rotate_sprite(0,0,0)
 	robot.talk("Intro2")
 	robot.audio._musicPlay()
+	robot.timer_idle.start()
 
-
-	
 func update_displayed_time():
 	dl_time_display.text = str(snapped(end_timer.time_left/60, 0.01)) + " minutes restantes"
 
 
 func _on_video_stream_player_finished() -> void:
 	dl_started = false
+	robot.audio.NotifsStream.play()
+
+func _on_startup_timer_timeout() -> void:
+	robot.audio.StartUpStream.play()
