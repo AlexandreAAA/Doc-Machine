@@ -256,6 +256,7 @@ wait_time = 5.0
 one_shot = true
 
 [node name="Icones_objets" type="Node2D" parent="." node_paths=PackedStringArray("cable_alu", "fil", "ram", "gpu", "ventilo", "grille", "bouton", "enceinte", "dessous_de_plat", "jack")]
+visible = false
 script = ExtResource("34_2gxvx")
 cable_alu = NodePath("cable_alu")
 fil = NodePath("fil")

@@ -24,6 +24,8 @@ func _process(delta: float) -> void:
 		intro()
 	prog_bar.value = (end_timer_time - end_timer.time_left)
 	update_displayed_time()
+	if robot.win_achieved == true:
+		prog_bar.value = 300.0
 
 func _on_end_timer_timeout() -> void:
 	robot.ending(false)
@@ -39,6 +41,10 @@ func intro():
 	robo_tween.parallel().tween_property($Robot,"position", Vector2(-200,60), 0.1)
 	robo_tween.parallel().tween_property($Robot,"scale", Vector2(1, 1), 0.1)
 	robot.talk("Intro")
+	await get_tree().create_timer(1).timeout
+	robot.change_sprite(0,0,6)
+	robot.rotate_sprite(0,0,0)
+	robot.talk("Intro2")
 
 	
 func update_displayed_time():

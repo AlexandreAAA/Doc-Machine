@@ -242,6 +242,8 @@ func check_victory() -> bool:
 func ending(twis  = false) :
 	twist = twis
 	end_game = true
+	change_sprite(7,6,9)
+	rotate_sprite(0,0,0)
 	talk("BadEnding")
 	
 func end_text_ending():
@@ -261,12 +263,18 @@ func _on_timer_transi_end_timeout() -> void:
 	if twist :
 		#BONNE FIN
 		if goodending3:
+			change_sprite(8,9,4)
+			rotate_sprite(0,0,180)
 			talk("GoodEnding3")
 			goodendingfin = true
 		elif goodending2:
+			change_sprite(14,14,3)
+			rotate_sprite(90,90,0)
 			talk("GoodEnding2")
 			goodending3 = true
 		else :
+			change_sprite(0,0,2)
+			rotate_sprite(0,0,0)
 			talk("GoodEnding1")
 			goodending2 = true
 	else :
