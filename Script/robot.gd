@@ -25,6 +25,7 @@ var end_game = false
 var goodending2 = false
 var goodending3 = false
 var goodendingfin = false
+var idle_timer_started = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	check_input_table(event)
@@ -154,7 +155,7 @@ func check_input_table(event):
 					change_sprite(3,3,2)
 					talk("BadDessous_de_plat")
 					audio.ErrorStream.play()
-					audio._playVoiceLine("BadDessous_de_plat",true)
+					audio._playVoiceLine("BadDessous_De_Plat",true)
 	if event.is_action_released("dessous_de_plat"):
 		fenetre_handler.scale_down(3)
 	if event.is_action_pressed("gpu"):
@@ -194,7 +195,7 @@ func check_input_table(event):
 					rotate_sprite(180,180,0)
 					talk("BadCable_alu")
 					audio.ErrorStream.play()
-					audio._playVoiceLine("BadCable_alu", true)
+					audio._playVoiceLine("BadCable_alu2", true)
 	if event.is_action_released("cable_alu"):
 		fenetre_handler.scale_down(5)
 	if event.is_action_pressed("enceinte"):
@@ -283,21 +284,21 @@ func check_victory() -> bool:
 		return true
 	return false
 
-func ending(twis  = false) :
+func ending(twis = false) :
 	twist = twis
 	end_game = true
 	change_sprite(7,6,9)
 	rotate_sprite(0,0,0)
 	talk("BadEnding")
-	audio._playVoiceLine("VoiceOutroBad")
+	audio._playVoiceLine("VoiceOutroBad", true)
 	audio._musicStop()
+	await audio.fini_de_jouer
+	timer_transi_end.start(5)
 	
 func end_text_ending():
-	if end_game and goodendingfin != true:
-		if goodending2 :
-			timer_transi_end.start(2)
-		timer_transi_end.start()
-	if !end_game:
+	#if end_game and goodendingfin != true:
+		#timer_transi_end.start()
+	if !end_game && idle_timer_started:
 		timer_idle.start()
 		
 func _on_timer_idle_timeout() -> void:
@@ -311,22 +312,42 @@ func _fini_de_jouer(audio_joue):
 func _on_timer_transi_end_timeout() -> void:
 	if twist :
 		#BONNE FIN
-		if goodending3:
-			change_sprite(8,9,4)
-			rotate_sprite(0,0,180)
-			talk("GoodEnding3")
-			goodendingfin = true
-		elif goodending2:
-			change_sprite(14,14,3)
-			rotate_sprite(90,90,0)
-			talk("GoodEnding2")
-			goodending3 = true
-		else :
-			change_sprite(0,0,2)
-			rotate_sprite(0,0,0)
-			talk("GoodEnding1")
-			audio.TadaStream.play()
-			goodending2 = true
-	else :
-		#MAUVAISE FIN
-		pass
+		change_sprite(0,0,2)
+		rotate_sprite(0,0,0)
+		talk("GoodEnding1")
+		audio.TadaStream.play()
+		audio._playVoiceLine("OutroGood1", true)
+		await audio.fini_de_jouer
+		
+		change_sprite(14,14,3)
+		rotate_sprite(90,90,0)
+		talk("GoodEnding2")
+		await get_tree().create_timer(2).timeout
+		
+		change_sprite(8,9,4)
+		rotate_sprite(0,0,180)
+		talk("GoodEnding3")
+		audio._playVoiceLine("OutroGood2", true)
+		goodendingfin = true
+		
+		
+		#if goodending3:
+			#change_sprite(8,9,4)
+			#rotate_sprite(0,0,180)
+			#talk("GoodEnding3")
+			#goodendingfin = true
+		#elif goodending2:
+			#change_sprite(14,14,3)
+			#rotate_sprite(90,90,0)
+			#talk("GoodEnding2")
+			#goodending3 = true
+			#audio.fini_de_jouer.emit()
+		#else :
+			#change_sprite(0,0,2)
+			#rotate_sprite(0,0,0)
+			#talk("GoodEnding1")
+			#audio.TadaStream.play()
+			#goodending2 = true
+	#else :
+		##MAUVAISE FIN
+		#pass

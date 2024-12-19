@@ -23,6 +23,12 @@ var IntroDL = preload("res://Audio/Voice/IntroOutro/IntroDL.mp3")
 var IntroPostDL = preload("res://Audio/Voice/IntroOutro/IntroPostDL.ogg")
 var VoiceOutroBad = preload("res://Audio/Voice/IntroOutro/OutroBad.ogg")
 var VoiceOutroGood = preload("res://Audio/Voice/IntroOutro/OutroGood.ogg")
+var Intro2 = preload("res://Audio/Voice/IntroOutro/Intro2.ogg")
+var Intro3 = preload("res://Audio/Voice/IntroOutro/Intro3.ogg")
+var Intro4 = preload("res://Audio/Voice/IntroOutro/Intro4.ogg")
+var Intro5 = preload("res://Audio/Voice/IntroOutro/Intro5.ogg")
+var OutroGood1 = preload("res://Audio/Voice/IntroOutro/OutroGood1.ogg")
+var OutroGood2 = preload("res://Audio/Voice/IntroOutro/OutroGood2.ogg")
 
 #Good
 var GoodFil = preload("res://Audio/Voice/Bien/GoodDoigt.ogg")
@@ -134,9 +140,16 @@ func _ready() -> void:
 	VoiceBank["IntroPreDL"] = IntroPreDL
 	VoiceBank["IntroDL"] = IntroDL
 	VoiceBank["IntroPostDL"] = IntroPostDL
+	VoiceBank["Intro2"] = Intro2
+	VoiceBank["Intro3"] = Intro3
+	VoiceBank["Intro4"] = Intro4
+	VoiceBank["Intro5"] = Intro5
 	
 	VoiceBank["VoiceOutroBad"] = VoiceOutroBad
 	VoiceBank["VoiceOutroGood"] = VoiceOutroGood
+	
+	VoiceBank["OutroGood1"] = OutroGood1
+	VoiceBank["OutroGood2"] = OutroGood2
 	
 	VoiceBank["GoodFil"] = GoodFil
 	VoiceBank["GoodCable_alu"] = GoodCable_alu
@@ -187,6 +200,5 @@ func _playSynthVoiceLine(synthVoiceBankKey : String, is_blocking : bool) -> void
 
 func _on_voice_stream_finished() -> void:
 	bloquant = false
-	if name_audio == "VoiceOutroBad" :
-		_playVoiceLine("VoiceOutroGood", true)
-		fini_de_jouer.emit("VoiceOutroGood")
+	if name_audio == "IntroPreDL" || "Intro2" || "Intro3" || "Intro4" || "Intro5" || "VoiceOutroBad" || "OutroGood1" || "OutroGood2": 
+		fini_de_jouer.emit()
