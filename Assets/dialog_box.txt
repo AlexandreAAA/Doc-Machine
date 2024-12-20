@@ -4,12 +4,16 @@ test_2
 	marche t-il
 enerve
 	TUMENERVES LA DIS DONC
-Intro
+Intro1
 	“Huh ? Hein ? Quoi ? Non ! Qu’est-ce que tu as fait ? Le téléchargement va reprendre !!”
 Intro2
 	Faut que tu m’aides ! Ils vont m’installer des drivers pour me connecter au cloud !!”
+Intro3
 	“Je suis le dernier ordinateur encore physique ! Ils rendront mes circuits inutilisables !!!”
+Intro4
 	“Il faut que tu fasses diverger le courant électrique en touchant mes composants !”
+Intro5
+	"Mets tes mains en moi !! Mets tes mains en moiiiiiii !!"
 IdleIE
 	Aidez-moi, je vous en supplie ! Ils vont me remettre Internet Explorer en navigateur par défaut !
 IdleDEFRAG
