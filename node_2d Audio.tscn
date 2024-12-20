@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://ck16uv8q1djdf"]
+[gd_scene load_steps=51 format=3 uid="uid://ck16uv8q1djdf"]
 
 [ext_resource type="Script" path="res://Scripts/Audio/AudioManager.gd" id="1_by8f7"]
 [ext_resource type="AudioStream" uid="uid://cmonx0aoaq47l" path="res://Audio/SounDesign/Alarm/alarm1 (1).ogg" id="1_swnh6"]
@@ -40,7 +40,9 @@
 [ext_resource type="AudioStream" uid="uid://cpmh5h33yomua" path="res://Audio/SounDesign/Start Up/start up 01 (3).ogg" id="39_msi2r"]
 [ext_resource type="AudioStream" uid="uid://clyw4pxyp1nuc" path="res://Audio/SounDesign/Tada/tada 1 (1).ogg" id="40_pae6s"]
 [ext_resource type="AudioStream" uid="uid://bbbto3gvke4x5" path="res://Audio/SounDesign/Tada/tada 1.ogg" id="41_1himr"]
+[ext_resource type="AudioStream" uid="uid://ct7skmvh4kgb2" path="res://Audio/Music/OST trans.wav" id="41_5yp4i"]
 [ext_resource type="AudioStream" uid="uid://bcqr6mvsa1aq7" path="res://Audio/Music/OST.ogg" id="41_u6b3s"]
+[ext_resource type="AudioStream" uid="uid://dcwhtvfa1g6e0" path="res://Audio/Voice/Pas bien/BadEspa.ogg" id="42_j14me"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dyrrs"]
 streams_count = 2
@@ -113,34 +115,55 @@ StartUpStream = NodePath("StartUpStream")
 TadaStream = NodePath("TadaStream")
 VoiceStream = NodePath("VoiceStream")
 MusicStream = NodePath("MusicStream")
-debug = true
 
 [node name="CorbeilleStream" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_dyrrs")
+bus = &"Sounds"
 
 [node name="ErrorStream" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_3voqo")
+bus = &"Sounds"
 
 [node name="NotifsStream" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_8ul3p")
+bus = &"Sounds"
 
 [node name="SonnerieStream" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_3ygxv")
+bus = &"Sounds"
 
 [node name="StartUpStream" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_i08hl")
+bus = &"Sounds"
 
 [node name="TadaStream" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_e2ebb")
+bus = &"Sounds"
 
 [node name="AlarmAudioStream" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_b1j5w")
+bus = &"Sounds"
 
 [node name="VoiceStream" type="AudioStreamPlayer2D" parent="."]
 max_polyphony = 3
+bus = &"Voice"
 
 [node name="MusicStream" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("41_5yp4i")
+max_polyphony = 2
+bus = &"Music"
+playback_type = 1
+
+[node name="MusicStreamtest" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("41_u6b3s")
 max_polyphony = 2
+bus = &"Music"
+playback_type = 1
+
+[node name="VoiceStreamTest" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("42_j14me")
+max_polyphony = 3
+bus = &"Voice"
 
 [connection signal="finished" from="VoiceStream" to="." method="_on_voice_stream_finished"]
+[connection signal="finished" from="VoiceStreamTest" to="." method="_on_voice_stream_finished"]

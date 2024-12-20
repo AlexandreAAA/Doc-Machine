@@ -1,21 +1,68 @@
-[gd_resource type="AudioBusLayout" format=3 uid="uid://c1n6otb3compn"]
+[gd_resource type="AudioBusLayout" load_steps=8 format=3 uid="uid://c1n6otb3compn"]
+
+[sub_resource type="AudioEffectLimiter" id="AudioEffectLimiter_8gcna"]
+resource_name = "Limiter"
+ceiling_db = -0.3
+threshold_db = -1.0
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_8cy8j"]
+resource_name = "Compressor"
+threshold = -3.1
+
+[sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_oxrhg"]
+resource_name = "HighPassFilter"
+cutoff_hz = 75.0
+db = 3
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_6mc2d"]
+resource_name = "LowPassFilter"
+cutoff_hz = 10000.0
+db = 2
+
+[sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_l2r05"]
+resource_name = "HighPassFilter"
+cutoff_hz = 75.0
+db = 1
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_ifqov"]
+resource_name = "Compressor"
+threshold = -6.6
+
+[sub_resource type="AudioEffectEQ6" id="AudioEffectEQ6_802lo"]
+resource_name = "EQ6"
+band_db/32_hz = -11.2
 
 [resource]
+bus/0/volume_db = -0.130497
+bus/0/effect/0/effect = SubResource("AudioEffectLimiter_8gcna")
+bus/0/effect/0/enabled = true
 bus/1/name = &"Voice"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = 0.0
+bus/1/volume_db = -0.328256
 bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectCompressor_8cy8j")
+bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectHighPassFilter_oxrhg")
+bus/1/effect/1/enabled = true
+bus/1/effect/2/effect = SubResource("AudioEffectLowPassFilter_6mc2d")
+bus/1/effect/2/enabled = true
 bus/2/name = &"Sounds"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
-bus/2/volume_db = 0.0
+bus/2/volume_db = -0.130497
 bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectHighPassFilter_l2r05")
+bus/2/effect/0/enabled = true
+bus/2/effect/1/effect = SubResource("AudioEffectCompressor_ifqov")
+bus/2/effect/1/enabled = true
 bus/3/name = &"Music"
 bus/3/solo = false
 bus/3/mute = false
 bus/3/bypass_fx = false
-bus/3/volume_db = 0.0
+bus/3/volume_db = -0.528235
 bus/3/send = &"Master"
+bus/3/effect/0/effect = SubResource("AudioEffectEQ6_802lo")
+bus/3/effect/0/enabled = true
