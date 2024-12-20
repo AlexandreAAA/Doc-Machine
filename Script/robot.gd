@@ -34,6 +34,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _ready() -> void:
 	dialog.finished_talking.connect(end_text_ending.bind())
+	audio.fini_de_jouer.connect(_fini_de_jouer.bind())
 	for i in size_input_table:
 		input_table.append(false)
 	victory_condition.resize(size_input_table)
@@ -294,21 +295,35 @@ func ending(twis = false) :
 	audio._musicStop()
 	await audio.fini_de_jouer
 	timer_transi_end.start(5)
-	
+
 func end_text_ending():
+	#pass
+	#if end_game and goodendingfin != true:
+		#if goodending2 :
+			#timer_transi_end.start(2)
+		#timer_transi_end.start()
+	#if !end_game:
+		#timer_idle.start()
 	#if end_game and goodendingfin != true:
 		#timer_transi_end.start()
 	if !end_game && idle_timer_started:
 		timer_idle.start()
-		
+
 func _on_timer_idle_timeout() -> void:
 	if idle_dialog.size() > idle_dialog_index:
 		dialog.set_dialog_text(idle_dialog[idle_dialog_index])
 		audio._playVoiceLine(idle_dialog[idle_dialog_index],false)
 		idle_dialog_index += 1
+
 func _fini_de_jouer(audio_joue):
-	if audio_joue == "VoiceOutroBad":
-		pass
+	if audio_joue == "VoiceOutroGood":
+		if !twist :
+			timer_transi_end.start()
+			var tween = get_tree().create_tween()
+			tween.tween_property($ColorRect,"color", Color(21.0,21.0,21.0,1.0),5.0)
+		if twist :
+			audio._playVoiceLine("VoiceOutroGood")
+
 func _on_timer_transi_end_timeout() -> void:
 	if twist :
 		#BONNE FIN

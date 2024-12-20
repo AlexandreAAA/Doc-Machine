@@ -206,5 +206,8 @@ func _playSynthVoiceLine(synthVoiceBankKey : String, is_blocking : bool) -> void
 
 func _on_voice_stream_finished() -> void:
 	bloquant = false
+	#if name_audio == "VoiceOutroBad" :
+		#fini_de_jouer.emit("VoiceOutroGood")
 	if name_audio == "IntroPreDL" || "Intro2" || "Intro3" || "Intro4" || "Intro5" || "VoiceOutroBad" || "OutroGood1" || "OutroGood2": 
 		fini_de_jouer.emit()
+
