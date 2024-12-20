@@ -25,6 +25,7 @@ func _process(delta: float) -> void:
 		prog_bar.value = (end_timer_time - end_timer.time_left)
 		update_displayed_time()
 	if robot.win_achieved == true:
+		end_timer.stop()
 		prog_bar.value = 300.0
 
 func _on_end_timer_timeout() -> void:
@@ -71,7 +72,10 @@ func intro():
 	robot.idle_timer_started = true
 
 func update_displayed_time():
-	dl_time_display.text = str(snapped(end_timer.time_left/60, 0.01)) + " minutes restantes"
+	var minute = int(end_timer.time_left)/60
+	var seconde = int(end_timer.time_left) % 60
+	dl_time_display.text = str(minute) + ":" + str(seconde) + " minutes restantes"
+	#dl_time_display.text = str(snapped(end_timer.time_left/60, 0.01)) + " minutes restantes"
 	if robot.win_achieved == true : 
 		dl_time_display.text = "0 minutes restantes"
 		

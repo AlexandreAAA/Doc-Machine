@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bi5ihj4hlj0bb" path="res://Assets/Visuel/dialog_window_np.png" id="2_ivabg"]
 [ext_resource type="FontFile" uid="uid://06tukd20hnrd" path="res://Assets/Visuel/calibri.otf" id="3_n7g6h"]
 
-[node name="Dialog_Control" type="Control" node_paths=PackedStringArray("dialog_text")]
+[node name="Dialog_Control" type="Control" node_paths=PackedStringArray("dialog_text", "end_rect", "end_text", "end_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +13,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4muap")
 dialog_text = NodePath("Dialog_Box/Dialog_text")
+end_rect = NodePath("ColorRect")
+end_text = NodePath("ColorRect/RichTextLabel")
+end_button = NodePath("ColorRect/Replay")
 
 [node name="Dialog_Box" type="TextureRect" parent="."]
 layout_mode = 0
@@ -33,3 +36,45 @@ offset_bottom = 343.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_n7g6h")
 theme_override_font_sizes/normal_font_size = 30
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.787759, 0.787759, 0.787759, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = -237.0
+offset_right = 202.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 100
+text = "BRAVO"
+
+[node name="Replay" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 770.0
+offset_top = 516.0
+offset_right = 1158.0
+offset_bottom = 679.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "Rejouer ?"
+
+[connection signal="pressed" from="ColorRect/Replay" to="." method="_on_replay_pressed"]
