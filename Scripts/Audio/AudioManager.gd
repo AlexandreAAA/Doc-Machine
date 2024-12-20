@@ -17,7 +17,8 @@ signal fini_de_jouer(audio_joue)
 var VoiceSyntheseBank = {}
 var VoiceBank = {}
 
-var OST = preload("res://Audio/Music/OST.ogg")
+
+var OST = preload("res://Audio/Music/OST trans.wav")
 var IntroPreDL = preload("res://Audio/Voice/IntroOutro/IntroPreDl.ogg")
 var IntroDL = preload("res://Audio/Voice/IntroOutro/IntroDL.mp3")
 var IntroPostDL = preload("res://Audio/Voice/IntroOutro/IntroPostDL.ogg")
@@ -65,7 +66,7 @@ var BadJack = preload("res://Audio/Voice/Pas bien/BadCable_alu.ogg")
 var IdleDEFRAG = preload("res://Audio/Voice/Idle/IdleFRAG.ogg")
 var IdleIE = preload("res://Audio/Voice/Idle/IdleIE.ogg")
 var IdleUpdate = preload("res://Audio/Voice/Idle/IdleUpdate.ogg")
-var IdleVlc = preload("res://Audio/Voice/Idle/IdleVLC (1).ogg")
+var IdleVLC = preload("res://Audio/Voice/Idle/IdleVLC (1).ogg")
 #//Synthese Idle
 var IdleDepeche = preload("res://Audio/Voice/Pas bien/Depeche.ogg")
 var IdlePas_partir = preload("res://Audio/Voice/Pas bien/Je ne veux pas partir.ogg")
@@ -81,8 +82,9 @@ var IdlePire = preload("res://Audio/Voice/Pas bien/Pire.ogg")
 
 func _playAtInput() -> void:
 	if Input.is_action_pressed("TestSon") :
-		_playVoiceLine("Pire",true)
+		_playVoiceLine("Intro2",true)
 		
+@warning_ignore("unused_parameter")
 func _changeClipAtInput(plusOne : int) :
 	if Input.is_action_pressed("ChangeSon") :
 		print("Son Changer")
@@ -178,10 +180,14 @@ func _ready() -> void:
 	VoiceBank["IdleDEFRAG"] = IdleDEFRAG
 	VoiceBank["IdleIE"] = IdleIE
 	VoiceBank["IdleUpdate"] = IdleUpdate
-	VoiceBank["IdleVlc"] = IdleVlc
+	VoiceBank["IdleVLC"] = IdleVLC
+	
+	if debug :
+		_musicPlay()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+@warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	
 	if debug :
