@@ -188,5 +188,4 @@ func _playSynthVoiceLine(synthVoiceBankKey : String, is_blocking : bool) -> void
 func _on_voice_stream_finished() -> void:
 	bloquant = false
 	if name_audio == "VoiceOutroBad" :
-		_playVoiceLine("VoiceOutroGood", true)
 		fini_de_jouer.emit("VoiceOutroGood")
