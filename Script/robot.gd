@@ -286,6 +286,7 @@ func check_victory() -> bool:
 	return false
 
 func ending(twis = false) :
+	await audio.fini_de_jouer
 	twist = twis
 	end_game = true
 	change_sprite(7,6,9)
@@ -345,6 +346,10 @@ func _on_timer_transi_end_timeout() -> void:
 		audio._playVoiceLine("OutroGood2", true)
 		goodendingfin = true
 		
+		await audio.fini_de_jouer
+		dialog.game_win()
+	else:
+		dialog.game_lost()
 		
 		#if goodending3:
 			#change_sprite(8,9,4)
