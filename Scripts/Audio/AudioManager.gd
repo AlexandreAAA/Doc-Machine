@@ -210,4 +210,3 @@ func _on_voice_stream_finished() -> void:
 		#fini_de_jouer.emit("VoiceOutroGood")
 	if name_audio == "IntroPreDL" || "Intro2" || "Intro3" || "Intro4" || "Intro5" || "VoiceOutroBad" || "OutroGood1" || "OutroGood2": 
 		fini_de_jouer.emit()
-
